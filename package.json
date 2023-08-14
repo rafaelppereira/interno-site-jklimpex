@@ -1,5 +1,5 @@
 {
-  "name": "site-qualivida-2.0",
+  "name": "qualivida-site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.5.0",
-    "@types/react": "18.2.20",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.15",
-    "next": "13.4.15",
-    "postcss": "8.4.27",
+    "@hookform/resolvers": "^3.2.0",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "framer-motion": "^10.15.1",
+    "next": "13.4.4",
+    "phosphor-react": "^1.4.1",
+    "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "react-hook-form": "^7.45.4",
+    "react-hot-toast": "^2.4.1",
+    "react-modal-video": "^2.0.1",
+    "swiper": "^9.3.2",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/react-modal-video": "^1.2.0",
+    "@types/swiper": "^6.0.0"
   }
 }
