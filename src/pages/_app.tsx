@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 
-import { Header } from "@/components/Header";
 import "@/styles/globals.css";
 
 // Config Swiper
@@ -16,7 +15,7 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: any) {
   return (
     <main className={poppins.className}>
       <Component {...pageProps} />
