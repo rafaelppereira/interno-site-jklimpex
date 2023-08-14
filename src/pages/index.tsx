@@ -165,7 +165,9 @@ export default function HomePage() {
                   : "opacity-0 invisible"
               } md:hidden transition-all absolute left-0 top-[165px] w-full px-5 py-8 bg-primary-500 flex flex-col gap-3 text-white uppercase`}
             >
-              <button onClick={() => handleScroll(refBanner)}>Início</button>
+              <button onClick={() => handleScroll(refBanner, true)}>
+                Início
+              </button>
 
               <button
                 type="button"
@@ -191,8 +193,8 @@ export default function HomePage() {
       </header>
 
       <ModalVideo
-        isOpen={hasOpenModalWatchVideo}
         channel="custom"
+        isOpen={hasOpenModalWatchVideo}
         onClose={() => setHasOpenModalWatchVideo(!hasOpenModalWatchVideo)}
         url="https://media.graphassets.com/A9rWFoFyQiKGytaG4W1Q"
         allowFullScreen={false}
