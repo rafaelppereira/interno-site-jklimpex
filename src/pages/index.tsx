@@ -5,16 +5,16 @@ import { Autoplay } from "swiper";
 import ModalVideo from "react-modal-video";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
-  CircleDashed,
-  EnvelopeSimple,
   Eye,
+  List,
+  Play,
+  Phone,
   FacebookLogo,
+  WhatsappLogo,
+  CircleDashed,
   HandPointing,
   InstagramLogo,
-  List,
-  Phone,
-  Play,
-  WhatsappLogo,
+  EnvelopeSimple,
   X,
 } from "phosphor-react";
 
@@ -568,19 +568,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="flex-1 md:sticky md:top-[550px]">
+          <div className="flex-1 md:sticky md:top-[550px] w-full">
             <Reveal>
-              <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-zinc-500">
+              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
                 Faturamento médico
               </h2>
-            </Reveal>
-            <Reveal>
-              <p className="mt-4 text-zinc-500 leading-relaxed text-lg">
-                Nulla incididunt velit non culpa. Nulla adipisicing ipsum ut ex
-                occaecat dolore nisi est enim mollit esse fugiat laboris
-                adipisicing. Do adipisicing est incididunt ad ullamco ad ad
-                culpa veniam consectetur eu commodo dolor.
-              </p>
             </Reveal>
           </div>
         </div>
@@ -590,17 +582,9 @@ export default function HomePage() {
         <div className="container flex flex-col md:flex-row gap-16 items-start">
           <div className="flex-1 md:sticky md:top-[550px]">
             <Reveal>
-              <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-zinc-500">
+              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
                 Agendamento de consultas
               </h2>
-            </Reveal>
-            <Reveal>
-              <p className="mt-4 text-zinc-500 leading-relaxed text-lg">
-                Nulla incididunt velit non culpa. Nulla adipisicing ipsum ut ex
-                occaecat dolore nisi est enim mollit esse fugiat laboris
-                adipisicing. Do adipisicing est incididunt ad ullamco ad ad
-                culpa veniam consectetur eu commodo dolor.
-              </p>
             </Reveal>
           </div>
 
@@ -791,17 +775,9 @@ export default function HomePage() {
 
           <div className="flex-1 md:sticky md:top-[550px]">
             <Reveal>
-              <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-zinc-500">
+              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
                 Relacionamento com Convênios
               </h2>
-            </Reveal>
-            <Reveal>
-              <p className="mt-4 text-zinc-500 leading-relaxed text-lg">
-                Nulla incididunt velit non culpa. Nulla adipisicing ipsum ut ex
-                occaecat dolore nisi est enim mollit esse fugiat laboris
-                adipisicing. Do adipisicing est incididunt ad ullamco ad ad
-                culpa veniam consectetur eu commodo dolor.
-              </p>
             </Reveal>
           </div>
         </div>
@@ -811,17 +787,9 @@ export default function HomePage() {
         <div className="container flex flex-col md:flex-row gap-16 items-start">
           <div className="flex-1 md:sticky md:top-[550px]">
             <Reveal>
-              <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-zinc-500">
+              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
                 Gestão Administrativa e Financeira
               </h2>
-            </Reveal>
-            <Reveal>
-              <p className="mt-4 text-zinc-500 leading-relaxed text-lg">
-                Nulla incididunt velit non culpa. Nulla adipisicing ipsum ut ex
-                occaecat dolore nisi est enim mollit esse fugiat laboris
-                adipisicing. Do adipisicing est incididunt ad ullamco ad ad
-                culpa veniam consectetur eu commodo dolor.
-              </p>
             </Reveal>
           </div>
           <div className="flex-1 ">
@@ -847,6 +815,68 @@ export default function HomePage() {
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
                     Negociação com fornecedores para reduzir custos fixos e
                     variáveis
+                  </h2>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
+                    3
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Análise de estoque para diminuir recursos imobilizados e
+                    aumentar capital de giro
+                  </h2>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
+                    4
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Negociação e cobrança de recebíveis com pacientes
+                  </h2>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
+                    5
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Relatórios periódicos de performance financeira, previsão de
+                    entradas e saídas
+                  </h2>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
+                    6
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Controle de gastos
+                  </h2>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
+                    7
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Armazenamento de boletos pagos
                   </h2>
                 </div>
               </Reveal>
