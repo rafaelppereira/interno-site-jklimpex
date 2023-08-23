@@ -33,9 +33,8 @@ export function Contact() {
 
           <Reveal>
             <p className="text-sm md:text-md mt-1 font-light text-zinc-500">
-              Estamos localizado no endereço: <br />- Av. Santa Catarina, 1197 –
-              Sala 405 Black Office Class Estreito <br /> – CEP 88075-500 –
-              Florianópolis – SC
+              Estamos localizado no endereço: <br />- Av. Santa Catarina, 1293 -
+              Sala 405 CEP 88820-284 - Florianópolis - SC
             </p>
           </Reveal>
 
@@ -50,7 +49,7 @@ export function Contact() {
               />
               <img
                 className="absolute right-3 bottom-3 w-44 h-44 select-none object-cover rounded-md border-4 border-zinc-300"
-                src="/black_office.png"
+                src="/santte/image_about.png"
                 alt="Black Office"
               />
             </div>

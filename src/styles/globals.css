@@ -34,15 +34,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 40px;
-
-  @media (max-width: 768px) {
-    padding-bottom: 0
-  }
 }
 
 .swiper-pagination-bullet {
-  @apply bg-secondary-500 !important;
+  @apply bg-white !important;
 
   width: 0.75rem !important;
   height: 0.75rem !important;
@@ -70,4 +65,12 @@ body {
   transform: translateX(-50%);
 
   @apply bg-zinc-200
+}
+
+.default .swiper-slide {
+  padding-bottom: 50px;
+}
+
+.default .swiper-pagination-bullet {
+  @apply bg-zinc-900 !important
 }

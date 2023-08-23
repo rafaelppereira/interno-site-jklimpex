@@ -1,18 +1,15 @@
 import Head from "next/head";
 import { useRef, useState } from "react";
 
-import { Autoplay } from "swiper";
-import ModalVideo from "react-modal-video";
+import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Eye,
   List,
-  Play,
   Phone,
   FacebookLogo,
   WhatsappLogo,
   CircleDashed,
-  HandPointing,
   InstagramLogo,
   EnvelopeSimple,
   X,
@@ -23,14 +20,13 @@ import Link from "next/link";
 import { Contact } from "@/components/plus/Contact";
 
 export default function HomePage() {
-  const [hasOpenModalWatchVideo, setHasOpenModalWatchVideo] = useState(false);
   const [hasToggleMenuMobile, setHasToggleMenuMobile] = useState(false);
 
   const refBanner: any = useRef();
   const refAbout: any = useRef();
-  const refMissionAndVision: any = useRef();
-  const refTerceirization: any = useRef();
   const refServices: any = useRef();
+  const refTerceirization: any = useRef();
+  const refMissionAndVision: any = useRef();
 
   function handleScroll(refOffsetTop: any, close?: boolean) {
     window.scroll({
@@ -84,10 +80,10 @@ export default function HomePage() {
             <div className="hidden lg:flex items-center gap-2 text-sm font-light text-white">
               <span className="flex items-center gap-2 border-r pr-4 mr-2">
                 <EnvelopeSimple size={20} />
-                atendimento@qualividagestaosaude.com
+                atendimento@clinicasantte.com
               </span>
               <span className="flex items-center gap-2">
-                <Phone size={20} /> (48) 3024-4370
+                <Phone size={20} /> (48) 9999-9999
               </span>
             </div>
           </div>
@@ -97,7 +93,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between h-[120px] px-8 max-w-7xl mx-auto">
             <figure>
               <img
-                className="h-[120px] lg:h-[140px] aspect-square select-none"
+                className="h-[120px] lg:h-[120px] aspect-square select-none"
                 src="/logo.svg"
                 alt="Qualivida Gestão em Saúde"
               />
@@ -123,19 +119,26 @@ export default function HomePage() {
                 onClick={() => handleScroll(refMissionAndVision)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
               >
-                Missão e Visão
+                Serviços
               </button>
               <button
                 onClick={() => handleScroll(refTerceirization)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
               >
-                Terceirização em Saúde
+                Especialistas
               </button>
               <button
                 onClick={() => handleScroll(refServices)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
               >
-                Serviços
+                Convênios
+              </button>
+
+              <button
+                onClick={() => handleScroll(refServices)}
+                className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
+              >
+                Contato
               </button>
             </div>
 
@@ -192,47 +195,44 @@ export default function HomePage() {
         <div className="bg-gray-100 h-[12px] flex items-center justify-center" />
       </header>
 
-      <ModalVideo
-        channel="custom"
-        isOpen={hasOpenModalWatchVideo}
-        onClose={() => setHasOpenModalWatchVideo(!hasOpenModalWatchVideo)}
-        url="https://media.graphassets.com/A9rWFoFyQiKGytaG4W1Q"
-        allowFullScreen={false}
-      />
-
       <section
-        className="mt-[calc(50px+120px+12px)] w-full  rounded-md container"
+        className="mt-[calc(50px+120px+12px)] w-full rounded-md"
         ref={refBanner}
       >
         <Swiper
           effect="fade"
           spaceBetween={20}
           slidesPerView={1}
-          modules={[Autoplay]}
+          pagination={true}
+          modules={[Autoplay, Pagination]}
         >
           <SwiperSlide>
-            <div className="relative group">
-              <button
-                type="button"
-                onClick={() =>
-                  setHasOpenModalWatchVideo(!hasOpenModalWatchVideo)
-                }
-                className="opacity-0 transition-all invisible group-hover:opacity-100 group-hover:visible absolute rounded-b-xl z-20 flex items-center justify-center left-0 top-0 bg-zinc-700/20 w-full h-full"
-              >
-                <Play size={70} weight="fill" className=" text-white" />
-              </button>
+            <div className="w-full h-[350px] md:h-[650px] text-white uppercase bg-zinc-100 bg-banner bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center">
+              <Reveal>
+                <h1 className="text-5xl md:text-8xl font-semibold drop-shadow-md">
+                  Cardiologia
+                </h1>
+              </Reveal>
+              <Reveal>
+                <span className="text-2xl md:text-4xl drop-shadow-md font-medium">
+                  Consulta de exames
+                </span>
+              </Reveal>
+            </div>
+          </SwiperSlide>
 
-              <video
-                muted
-                autoPlay
-                src="https://media.graphassets.com/A9rWFoFyQiKGytaG4W1Q"
-                className="h-full w-full rounded-b-xl border-4 border-zinc-100"
-              />
-
-              <div className="absolute z-10 flex items-center gap-2 left-5 bottom-5 bg-secondary-500 text-white text-sm px-4 py-2 rounded-md">
-                <HandPointing size={20} />
-                Clique para assistir o vídeo
-              </div>
+          <SwiperSlide>
+            <div className="w-full  h-[350px] md:h-[650px] text-white uppercase bg-zinc-100 bg-nutricaoBanner bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center">
+              <Reveal>
+                <h1 className="text-5xl md:text-8xl font-semibold drop-shadow-md">
+                  Nutrição
+                </h1>
+              </Reveal>
+              <Reveal>
+                <span className="text-2xl mt-2 block md:text-4xl drop-shadow-md font-medium">
+                  Clínica e esportiva
+                </span>
+              </Reveal>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -243,24 +243,28 @@ export default function HomePage() {
           <div className="flex-1 w-full ">
             <Reveal>
               <img
-                src="/qualivida/alan_nicole_roberta.jpg"
-                alt="Imagem dos proprietários da Qualivida"
-                className="w-full h-full object-cover rounded-lg border-4 border-zinc-200 z-10"
+                src="/santte/image_about.png"
+                alt="Imagem da Clínica Santté"
+                className="w-full h-full object-cover rounded-lg "
               />
             </Reveal>
           </div>
           <div className="flex-1">
             <Reveal>
               <h1 className="sm:text-4xl text-3xl text-zinc-600 font-semibold">
-                Quem somos
+                SOBRE NÓS
               </h1>
             </Reveal>
             <Reveal>
               <p className="mt-4 text-zinc-500 leading-relaxed text-md sm:text-lg">
-                A Qualivida Gestão em Saúde foi fundada em Julho de 2017 com a
-                finalidade de prestar serviços de terceirização para o setor de
-                saúde, como consultórios, clínicas e hospitais, estabelecidos na
-                Grande Florianópolis.
+                A Santté Saúde foi idealizada para oferecer o melhor para você e
+                para toda sua família Primamos pelo atendimento humanizado,
+                conforto e qualidade! ​ <br />
+                <br />
+                Somos uma Equipe de Profissionais Especializados nas Áreas da
+                Saúde e Bem estar: Cardiologia, Cirurgião vascular, Estética
+                avançada, Nutrição e Psicologia. ​ <br />
+                <br />​ Um novo espaço em Palhoça SC! Agende a Sua Consulta!
               </p>
             </Reveal>
           </div>
@@ -274,45 +278,157 @@ export default function HomePage() {
         <div className="container flex justify-center">
           <Reveal>
             <h2 className="text-2xl sm:text-3xl text-zinc-500 font-semibold border-b-2 border-secondary-500/60 pb-2 px-3">
-              Missão e Visão
+              Serviços
             </h2>
           </Reveal>
         </div>
 
         <div className="container flex flex-col md:flex-row gap-10 mt-20">
-          <div className="flex-1 bg-primary-500 p-7 sm:p-10 rounded-md">
-            <Reveal>
-              <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
-                <CircleDashed size={23} />
+          <Swiper
+            effect="fade"
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={true}
+            modules={[Autoplay, Pagination]}
+            className="default"
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Atendimento médico
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
+                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
+                    commodo justo mauris dictum leo ut nisl blandit. Pretium
+                    hendrerit feugiat morbi pellentesque. Elementum at
+                    adipiscing aliquam integer rutrum.
+                  </p>
+                </Reveal>
               </div>
-              <h1 className="mt-6 text-white text-2xl sm:text-3xl">Missão</h1>
-            </Reveal>
-            <Reveal>
-              <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                Oferecer soluções individualizadas de Gestão em Saúde para
-                nossos parceiros, proporcionando o máximo em performance,
-                modernizando processos e reduzindo custos, atuando de forma
-                responsável, com a finalidade de fazer prosperar
-                progressivamente o negócio de nossos parceiros.
-              </p>
-            </Reveal>
-          </div>
+            </SwiperSlide>
 
-          <div className="flex-1 bg-primary-500 p-7 sm:p-10 rounded-md">
-            <Reveal>
-              <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
-                <Eye size={23} />
+            <SwiperSlide>
+              <div className="flex-1 bg-rose-500 p-7 sm:p-10 text-left rounded-md">
+                <Reveal>
+                  <div className="w-11 h-11 bg-rose-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Procedimentos
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
+                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
+                    commodo justo mauris dictum leo ut nisl blandit. Pretium
+                    hendrerit feugiat morbi pellentesque. Elementum at
+                    adipiscing aliquam integer rutrum.
+                  </p>
+                </Reveal>
               </div>
-              <h1 className="mt-6 text-white text-2xl sm:text-3xl">Visão</h1>
-            </Reveal>
-            <Reveal>
-              <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                Ser referencial como empresa de Gestão em Saúde, reconhecida
-                como a melhor opção por consultórios, clínicas e hospitais pela
-                excelência em nossos serviços e vínculo com nossos parceiros.
-              </p>
-            </Reveal>
-          </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Atendimento remoto
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
+                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
+                    commodo justo mauris dictum leo ut nisl blandit. Pretium
+                    hendrerit feugiat morbi pellentesque. Elementum at
+                    adipiscing aliquam integer rutrum.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Atendimento médico
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
+                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
+                    commodo justo mauris dictum leo ut nisl blandit. Pretium
+                    hendrerit feugiat morbi pellentesque. Elementum at
+                    adipiscing aliquam integer rutrum.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex-1 bg-rose-500 p-7 sm:p-10 text-left rounded-md">
+                <Reveal>
+                  <div className="w-11 h-11 bg-rose-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Procedimentos
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
+                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
+                    commodo justo mauris dictum leo ut nisl blandit. Pretium
+                    hendrerit feugiat morbi pellentesque. Elementum at
+                    adipiscing aliquam integer rutrum.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Atendimento remoto
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
+                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
+                    commodo justo mauris dictum leo ut nisl blandit. Pretium
+                    hendrerit feugiat morbi pellentesque. Elementum at
+                    adipiscing aliquam integer rutrum.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
 
@@ -321,41 +437,33 @@ export default function HomePage() {
           <div className="flex-1 md:sticky md:top-[350px]">
             <Reveal>
               <span className="uppercase text-secondary-500 font-medium text-lg sm:text-xl">
-                O que é?
+                Quais são?
               </span>
             </Reveal>
             <Reveal>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-zinc-500">
-                Terceirização em Saúde
+                Nossos especialistas
               </h2>
             </Reveal>
             <Reveal>
               <p className="mt-4 text-zinc-500 font-light leading-relaxed text-md sm:text-lg">
-                Terceirização é a contratação de empresa para a realização de
-                serviços específicos dentro do processo produtivo da empresa
-                contratante. De forma simplificada a empresa contratada será a
-                intermediadora do serviço e as relações trabalhistas serão entre
-                o trabalhador e a empresa prestadora de serviços, e não com a
-                contratante. O conceito de terceirização prevê que a empresa
-                contratada deve realizar os serviços com organização própria,
-                autonomia técnica e jurídica, cumprindo o objeto do contrato.
+                Lorem ipsum dolor sit amet consectetur. Sit semper aliquam vel
+                in massa amet ultricies ac dignissim. Lobortis amet scelerisque
+                pellentesque consectetur tellus amet eget.
                 <br />
                 <br />
-                Assim, cada empresa é responsável pela contratação e remuneração
-                de seus funcionários, e pelo cumprimento de suas obrigações
-                trabalhistas e previdenciárias com seus respectivos empregados.
+                Mi sit ac pulvinar suspendisse sit nisl curabitur. Urna nisi
+                pharetra quam fermentum vel tincidunt. Orci volutpat nulla
+                gravida phasellus lectus. Vitae consectetur malesuada eu felis.
+                Integer nulla sociis mollis ultricies purus ultrices platea
+                eros. vel tincidunt. Orci volutpat nulla gravida phasellus
+                lectus. Vitae consectetur malesuada eu felis. Integer nulla
+                sociis mollis ultricies purus ultrices platea eros.
               </p>
             </Reveal>
           </div>
 
           <div className="flex-1 ">
-            <Reveal>
-              <h1 className="text-lg sm:text-xl md:text-2xl text-zinc-500 font-semibold">
-                Quais os benefícios de terceirizar <br /> processos produtivos
-                e/ou operacionais?
-              </h1>
-            </Reveal>
-
             <div className="flex flex-col gap-10 mt-10">
               <Reveal>
                 <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
@@ -364,9 +472,9 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    A terceirização de serviços possibilita priorizar a
-                    atividade fim (core-business) da empresa
+                    Dr. Rafael Meirelles
                   </h2>
+                  <p>Médico Cardiologista | Responsável Técnico</p>
                 </div>
               </Reveal>
 
@@ -377,11 +485,9 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Reduz custos com mão de obra e estrutura organizacional,
-                    encargos trabalhistas, rescisões de contratos, férias,
-                    faltas, licenças médicas, turn over, FGTS, INSS e ações
-                    trabalhistas
+                    Dra. Lenira Maluf
                   </h2>
+                  <p>Biomédica Especialista em Estética Avançada</p>
                 </div>
               </Reveal>
 
@@ -392,9 +498,9 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Moderniza processos através da reorganização e
-                    especialização da empresa contratada
+                    Dr. Gabriel Fázzeri
                   </h2>
+                  <p>Médico Cardiologista</p>
                 </div>
               </Reveal>
 
@@ -405,10 +511,9 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Qualificação dos profissionais para cada setor terceirizado,
-                    pelo constante investimento em capacitação dos nossos
-                    colaboradores
+                    Carline Moesch
                   </h2>
+                  <p>Nutricionista</p>
                 </div>
               </Reveal>
 
@@ -419,40 +524,36 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Otimização do tempo, proporcionando à empresa contratante
-                    maior foco nas estratégias de performance e crescimento
+                    Ingrid Maciel
                   </h2>
+                  <p>Psicóloga</p>
                 </div>
               </Reveal>
-            </div>
-          </div>
-        </div>
 
-        <div className="container mt-20 md:mt-28 ">
-          <div className="bg-zinc-100/50 gap-20 border-2 border-zinc-100 p-5 sm:p-10 rounded-md flex flex-col md:flex-row items-center">
-            <div className="flex-1 w-full">
               <Reveal>
-                <img
-                  src="/qualivida/nicole.jpg"
-                  alt="Imagem da Sócia Nicole Soares da Qualivida Gestão em Saúde"
-                  className="h-[300px] object-cover rounded-lg border-4 border-zinc-200 z-10"
-                />
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-secondary-500 text-white rounded-full text-2xl flex items-center justify-center">
+                    6
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Dr Pedro Ceretta
+                  </h2>
+                  <p>Médico Cirurgião Vascular</p>
+                </div>
               </Reveal>
-            </div>
-            <div className="flex-1">
+
               <Reveal>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-zinc-500">
-                  Quanto custa?
-                </h2>
-              </Reveal>
-              <Reveal>
-                <p className="mt-4 text-zinc-600 font-light leading-relaxed text-sm sm:text-md md:text-lg">
-                  As necessidades de terceirização das empresas são exclusivas
-                  de cada negócio. Com soluções individualizadas de acordo com
-                  cada necessidade, garantimos redução de custos se comparados
-                  aos custos de contratação e manutenção da folha de pagamento
-                  de colaboradores contratados.
-                </p>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-secondary-500 text-white rounded-full text-2xl flex items-center justify-center">
+                    7
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Dra Thaynara R Fagundes
+                  </h2>
+                  <p>Psiquiatra</p>
+                </div>
               </Reveal>
             </div>
           </div>
@@ -461,508 +562,161 @@ export default function HomePage() {
 
       <section
         className="py-20 bg-zinc-100/50 border-t-2 border-b-2 border-zinc-200"
-        ref={refServices}
+        ref={refMissionAndVision}
       >
-        <div className="container flex flex-col-reverse md:flex-row gap-16 items-start">
-          <div className="flex-1 ">
-            <div className="flex flex-col gap-10 mt-10">
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    1
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Pré-anáise das guias para identificar e corrigir
-                    inconformidades
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    2
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Digitação das guias em sistema apropriado
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    3
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Envio do faturamento físico ou eletrônico conforme
-                    calendário de entrega
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    4
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Apresentação das faturas aos convênios em suas datas
-                    previstas
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    5
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Emissão de relatórios de faturamento detalhando previsão de
-                    recebimento por mês
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    6
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Provisão do fluxo de caixa mensal
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    7
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Conferência e recuperação de eventuais glosas
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    8
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Melhorar tempo de recebimento e perda zero
-                  </h2>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-
-          <div className="flex-1 md:sticky md:top-[550px] w-full">
-            <Reveal>
-              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
-                Faturamento médico
-              </h2>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="container flex flex-col md:flex-row gap-16 items-start">
-          <div className="flex-1 md:sticky md:top-[550px]">
-            <Reveal>
-              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
-                Agendamento de consultas
-              </h2>
-            </Reveal>
-          </div>
-
-          <div className="flex-1 ">
-            <div className="flex flex-col gap-10 mt-10">
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    1
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Secretária capacitada para excelência no atendimento
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    2
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Número de telefone exclusivo
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    3
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Atendimento personalizado para cada médico/ consultório/
-                    clínica
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    4
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Agendamento via WhatsApp
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    5
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Número de WhatsApp próprio com a logo da clínica
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    6
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Atendimento Humanizado
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    7
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Mensagens eletrônicas de confirmação de consultas
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    8
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Mensagens manuais de confirmação de consultas
-                  </h2>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-zinc-100/50 border-t-2 border-b-2 border-zinc-200">
-        <div className="container flex flex-col-reverse md:flex-row gap-16 items-start">
-          <div className="flex-1 ">
-            <div className="flex flex-col gap-10 mt-10">
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    1
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Solicitação e acompanhamento de autorização de consultas,
-                    medicamentos e procedimentos
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    2
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Orientações aos pacientes quanto aos documentos necessários
-                    para autorização de procedimentos (prescrição, pedido
-                    médico, exames, etc)
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    3
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Credenciamento de convênios para diversas especialidades
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    4
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Credenciamento de convênios para medicamentos
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    5
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Credenciamento de convênios para procedimentos
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    6
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Negociações atrativas quanto ao volume de atendimentos e
-                    margem operacional
-                  </h2>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-
-          <div className="flex-1 md:sticky md:top-[550px]">
-            <Reveal>
-              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
-                Relacionamento com Convênios
-              </h2>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="container flex flex-col md:flex-row gap-16 items-start">
-          <div className="flex-1 md:sticky md:top-[550px]">
-            <Reveal>
-              <h2 className="bg-zinc-100 border-4 border-zinc-300 rounded-md w-full p-5 text-center text-2xl sm:text-2xl md:text-2xl font-semibold text-zinc-500">
-                Gestão Administrativa e Financeira
-              </h2>
-            </Reveal>
-          </div>
-          <div className="flex-1 ">
-            <div className="flex flex-col gap-10 mt-10">
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    1
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Análise para melhoria da margem operacional e payback
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    2
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Negociação com fornecedores para reduzir custos fixos e
-                    variáveis
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    3
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Análise de estoque para diminuir recursos imobilizados e
-                    aumentar capital de giro
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    4
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Negociação e cobrança de recebíveis com pacientes
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    5
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Relatórios periódicos de performance financeira, previsão de
-                    entradas e saídas
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    6
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Controle de gastos
-                  </h2>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
-                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-primary-500 text-white rounded-full text-2xl flex items-center justify-center">
-                    7
-                  </div>
-
-                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Armazenamento de boletos pagos
-                  </h2>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-zinc-100/50 border-t-2 border-b-2 border-zinc-200">
         <div className="container flex justify-center">
           <Reveal>
             <h2 className="text-2xl sm:text-3xl text-zinc-500 font-semibold border-b-2 border-secondary-500/60 pb-2 px-3">
-              Gerência Qualivida
+              Convênios
             </h2>
           </Reveal>
         </div>
 
-        <div className="container mt-10 flex flex-col md:flex-row gap-16">
-          <div className="flex-1 h-[500px] relative rounded-md">
-            <Reveal>
-              <img
-                src="/qualivida/alan_retrato.jpg"
-                alt="Imagem de Alan Bub Cabral"
-                className="h-full w-full object-cover object-bottom  border-4 border-zinc-200/70"
-              />
-            </Reveal>
+        <div className="container flex flex-col md:flex-row gap-10 mt-20">
+          <Swiper
+            effect="fade"
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={true}
+            modules={[Autoplay, Pagination]}
+            className="default"
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/abepom.png"
+                    alt="Convênio da Abepom"
+                    className=" object-contain"
+                  />
+                </div>
 
-            <Reveal>
-              <div className="absolute w-[90%] text-sm p-5  right-0 -bottom-10 rounded-md  bg-primary-400 text-white">
-                <h1 className="text-xl font-medium">Alan Bub Cabral</h1>
-                <p className="text-xs mt-3 text-zinc-200 leading-relaxed">
-                  MBA em Marketing <br /> – Fundação Getúlio Vargas – FGV
-                </p>
-                <p className="text-xs mt-1 text-zinc-200 leading-relaxed">
-                  Administração <br /> – Universidade do Vale do Itajaí –
-                  UNIVALI
-                </p>
-                <p className="text-xs mt-1 text-zinc-200 leading-relaxed">
-                  Gestão Hospitalar <br /> – Universidade Anhembi Morumbi
-                </p>
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">Abepom saúde</h1>
+                </div>
               </div>
-            </Reveal>
-          </div>
+            </SwiperSlide>
 
-          <div className="flex-1 h-[500px] relative rounded-md">
-            <Reveal>
-              <img
-                src="/qualivida/nicole_retrato.jpg"
-                alt="Imagem de Nicole Soares"
-                className="h-full w-full object-cover  border-4 border-zinc-200/70"
-              />
-            </Reveal>
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/celos.png"
+                    alt="Convênio da Celos"
+                    className="object-contain"
+                  />
+                </div>
 
-            <Reveal>
-              <div className="absolute w-[90%] text-sm p-5  right-0 -bottom-10 rounded-md  bg-primary-400 text-white">
-                <h1 className="text-xl font-medium">Nicole Soares</h1>
-                <p className="text-xs mt-3 text-zinc-200 leading-relaxed">
-                  Administração <br /> – Universidade Estácio de Sá
-                </p>
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">Celos</h1>
+                </div>
               </div>
-            </Reveal>
-          </div>
+            </SwiperSlide>
 
-          <div className="flex-1 h-[500px] relative rounded-md">
-            <Reveal>
-              <img
-                src="/qualivida/roberta_retrato.jpg"
-                alt="Imagem de Roberta Soares Bub Cabral"
-                className="h-full w-full object-cover  border-4 border-zinc-200/70"
-              />
-            </Reveal>
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/clinipam.png"
+                    alt="Convênio da Clinipam"
+                    className="object-contain"
+                  />
+                </div>
 
-            <Reveal>
-              <div className="absolute w-[90%] text-sm p-5  right-0 -bottom-10 rounded-md  bg-primary-400 text-white">
-                <h1 className="text-xl font-medium">
-                  Roberta Soares Bub Cabral
-                </h1>
-                <p className="text-xs mt-3 text-zinc-200 leading-relaxed">
-                  Gestão de Recursos Humanos <br /> – Universidade Estácio de Sá
-                </p>
-                <p className="text-xs mt-1 text-zinc-200 leading-relaxed">
-                  Gestão da Qualidade <br /> – Universidade Estácio de Sá
-                </p>
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">Clinipam</h1>
+                </div>
               </div>
-            </Reveal>
-          </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/cdlsaude.png"
+                    alt="Convênio da CDL Saúde"
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">CDL Saúde</h1>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/abepom.png"
+                    alt="Convênio da Abepom"
+                    className=" object-contain"
+                  />
+                </div>
+
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">Abepom saúde</h1>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/celos.png"
+                    alt="Convênio da Celos"
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">Celos</h1>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/clinipam.png"
+                    alt="Convênio da Clinipam"
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">Clinipam</h1>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                <div className="flex-1 flex items-center justify-center p-5">
+                  <img
+                    src="/santte/convenios/cdlsaude.png"
+                    alt="Convênio da CDL Saúde"
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="bg-primary-500 py-4 uppercase">
+                  <h1 className="text-white text-xl">CDL Saúde</h1>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
 
@@ -974,10 +728,9 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row items-center gap-2 py-5 px-6 bg-white rounded-b-2xl">
               <img className="w-20" src="/logo.svg" alt="" />
               <p className="hidden md:block pl-5 text-zinc-500 leading-relaxed">
-                A Qualivida Gestão em Saúde foi fundada em Julho de 2017 com a
-                finalidade de prestar serviços de terceirização para o setor de
-                saúde, como consultórios, clínicas e hospitais, estabelecidos na
-                Grande Florianópolis.
+                A Santté Saúde foi idealizada para oferecer o melhor para você e
+                para toda sua família Primamos pelo atendimento humanizado,
+                conforto e qualidade!
               </p>
             </div>
           </Reveal>
@@ -988,12 +741,6 @@ export default function HomePage() {
               <div className="flex flex-col gap-2 text-white text-center md:text-left">
                 <h2 className="text-xl font-medium">Menu</h2>
                 <button
-                  onClick={() => handleScroll(refBanner)}
-                  className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
-                >
-                  Início
-                </button>
-                <button
                   onClick={() => handleScroll(refAbout)}
                   className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
@@ -1003,19 +750,19 @@ export default function HomePage() {
                   onClick={() => handleScroll(refMissionAndVision)}
                   className="mt-2 text-center md:text-left font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
-                  Missão e Visão
+                  Serviços
                 </button>
                 <button
                   onClick={() => handleScroll(refTerceirization)}
                   className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
-                  Terceirização em Saúde
+                  Especialistas
                 </button>
                 <button
                   onClick={() => handleScroll(refServices)}
                   className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
-                  Serviços
+                  Contato
                 </button>
               </div>
             </div>
@@ -1072,8 +819,8 @@ export default function HomePage() {
           <div className="border-t border-white/20 pt-6 mt-10 flex flex-col items-center justify-center">
             <Reveal>
               <span className="text-sm text-zinc-200 font-light text-center md:text-left block">
-                Sapiens Assessoria Empresarial Ltda – EPP CNPJ:
-                41.801.848/0001-05 | Qualivida Gestão em Saúde
+                Santté clinica médica Ltda - CNPJ: 09091209/0001-23 | Santté
+                clínica médica
               </span>
             </Reveal>
             <Reveal>

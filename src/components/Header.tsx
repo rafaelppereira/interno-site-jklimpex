@@ -47,7 +47,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-2 text-sm font-light text-white">
             <span className="flex items-center gap-2 border-r pr-4 mr-2">
               <EnvelopeSimple size={20} />
-              atendimento@qualividagestaosaude.com
+              atendimento@clinicasantte.com
             </span>
             <span className="flex items-center gap-2">
               <Phone size={20} /> (48) 3024-4370

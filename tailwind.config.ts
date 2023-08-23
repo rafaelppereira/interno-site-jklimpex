@@ -4,18 +4,24 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        banner: "url(/backgrounds/bg-banner.jpg)",
+        banner: "url(/backgrounds/banner.png)",
         maintenance: "url(/backgrounds/bg-auth.png)",
+        nutricaoBanner: "url(/backgrounds/nutricao_banner.png)",
       },
 
       colors: {
         primary: {
-          400: "#006A9E",
-          500: "#014C71",
+          400: "#4B5D78",
+          500: "#324158",
         },
 
         secondary: {
-          500: "#76A801",
+          500: "#4B5D78",
+        },
+
+        rose: {
+          400: "#DFACA4",
+          500: "#CD9F97",
         },
       },
     },
