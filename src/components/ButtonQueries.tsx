@@ -70,7 +70,7 @@ export function ButtonQueries() {
         onClick={() => setHasToggleMenuOptions(!hasToggleMenuOptions)}
         className={`${
           !hasToggleMenuOptions && "animate-bounce"
-        } fixed z-[999] right-4 bottom-5 px-6 py-4  hover:brightness-90 transition-all flex items-center gap-2 justify-start  bg-primary-500 text-white text-sm md:text-md rounded-md shadow-md`}
+        } fixed z-[999] right-4 bottom-5 px-6 py-4  hover:brightness-90 transition-all flex items-center gap-2 justify-start  bg-primary-500 text-white text-sm md:text-md rounded-md shadow-md border-2 border-primary-400`}
       >
         <CaretUp
           size={20}
