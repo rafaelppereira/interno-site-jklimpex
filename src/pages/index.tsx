@@ -605,7 +605,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">Abepom saúde</h1>
+                  <Reveal>
+                    <h1 className="text-white text-xl">Abepom saúde</h1>
+                  </Reveal>
                 </div>
               </div>
             </SwiperSlide>
@@ -620,9 +622,11 @@ export default function HomePage() {
                   />
                 </div>
 
-                <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">Celos</h1>
-                </div>
+                <Reveal>
+                  <div className="bg-primary-500 py-4 uppercase">
+                    <h1 className="text-white text-xl">Celos</h1>
+                  </div>
+                </Reveal>
               </div>
             </SwiperSlide>
 
@@ -637,7 +641,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">Clinipam</h1>
+                  <Reveal>
+                    <h1 className="text-white text-xl">Clinipam</h1>
+                  </Reveal>
                 </div>
               </div>
             </SwiperSlide>
@@ -653,7 +659,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">CDL Saúde</h1>
+                  <Reveal>
+                    <h1 className="text-white text-xl">CDL Saúde</h1>
+                  </Reveal>
                 </div>
               </div>
             </SwiperSlide>
@@ -669,7 +677,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">Abepom saúde</h1>
+                  <Reveal>
+                    <h1 className="text-white text-xl">Abepom saúde</h1>
+                  </Reveal>
                 </div>
               </div>
             </SwiperSlide>
@@ -685,7 +695,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">Celos</h1>
+                  <Reveal>
+                    <h1 className="text-white text-xl">Celos</h1>
+                  </Reveal>
                 </div>
               </div>
             </SwiperSlide>
@@ -701,7 +713,9 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">Clinipam</h1>
+                  <Reveal>
+                    <h1 className="text-white text-xl">Clinipam</h1>
+                  </Reveal>
                 </div>
               </div>
             </SwiperSlide>
@@ -717,11 +731,64 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-primary-500 py-4 uppercase">
-                  <h1 className="text-white text-xl">CDL Saúde</h1>
+                  <Reveal>
+                    <h1 className="text-white text-xl">CDL Saúde</h1>
+                  </Reveal>
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
+        </div>
+      </section>
+
+      <section className="py-20  border-t-2 border-b-2 border-zinc-200">
+        <div className="container flex flex-col md:flex-row items-center gap-20">
+          <div className="relative rounded-md shrink-0 w-full sm:w-auto">
+            <img
+              src="/qualivida/alan_retrato.jpg"
+              alt="Imagem de Alan Bub Cabral"
+              className="w-full  md:w-[400px] md:h-[500px] object-cover object-bottom  border-4 border-zinc-200/70"
+            />
+
+            <Reveal>
+              <div className="absolute w-[90%] text-sm p-5  right-0 -bottom-10 rounded-md  bg-primary-400 text-white">
+                <h1 className="text-xl font-medium">Renato Cabral</h1>
+                <p className="text-xs mt-3 text-zinc-200 leading-relaxed">
+                  - Nisi eiusmod pariatur amet anim esse dolor.
+                </p>
+
+                <p className="text-xs mt-3 text-zinc-200 leading-relaxed">
+                  - Nisi eiusmod pariatur amet anim esse dolor.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          <div>
+            <Reveal>
+              <h1 className="text-3xl text-zinc-500 font-semibold">
+                Responsável técnico
+              </h1>
+            </Reveal>
+            <Reveal>
+              <p className="leading-relaxed text-lg mt-4 text-zinc-500">
+                Amet aute ut minim sint labore adipisicing proident amet. Quis
+                mollit laboris in sit voluptate irure laborum cillum qui
+                commodo. Duis dolor non ea nulla consectetur qui incididunt
+                ipsum. Eiusmod pariatur sit magna consectetur quis deserunt. Ut
+                veniam esse incididunt sunt tempor veniam aliqua culpa commodo
+                consequat.
+                <br />
+                <br />
+                Proident adipisicing id aliquip cupidatat. Adipisicing magna est
+                do adipisicing tempor. Irure cillum proident aliquip aliquip
+                cillum non laboris duis culpa id duis ullamco proident. Labore
+                tempor proident laboris occaecat commodo eiusmod do ea occaecat
+                velit ullamco nostrud esse. Occaecat irure id adipisicing minim
+                id voluptate aliqua dolore velit irure eu excepteur.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 
