@@ -18,6 +18,7 @@ import {
 import { Reveal } from "@/components/animation/Reveal";
 import Link from "next/link";
 import { Contact } from "@/components/plus/Contact";
+import { ButtonQueries } from "@/components/ButtonQueries";
 
 export default function HomePage() {
   const [hasToggleMenuMobile, setHasToggleMenuMobile] = useState(false);
@@ -237,6 +238,10 @@ export default function HomePage() {
           </SwiperSlide>
         </Swiper>
       </section>
+
+      <div>
+        <ButtonQueries />
+      </div>
 
       <section className="py-16 md:py-20" ref={refAbout}>
         <div className="container flex flex-col-reverse md:flex-row items-center gap-20">
