@@ -20,6 +20,8 @@ import {
   InstagramLogo,
   EnvelopeSimple,
 } from "phosphor-react";
+import { convenios } from "@/utils/content/convenios";
+import { servicesContent } from "@/utils/content/servicos";
 
 export default function HomePage() {
   const [hasToggleMenuMobile, setHasToggleMenuMobile] = useState(false);
@@ -339,37 +341,41 @@ export default function HomePage() {
             spaceBetween={20}
             slidesPerView={1}
             pagination={true}
+            className="default "
             modules={[Autoplay, Pagination]}
-            className="default"
             breakpoints={{
               768: {
                 slidesPerView: 2,
               },
             }}
           >
-            <SwiperSlide>
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
-                <Reveal>
-                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
-                    <CircleDashed size={23} />
+            {servicesContent.map((item, index) => {
+              return (
+                <SwiperSlide key={index} className="n2Class">
+                  <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                    <Reveal>
+                      <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                        <CircleDashed size={23} />
+                      </div>
+                      <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                        Atendimento médico
+                      </h1>
+                    </Reveal>
+                    <Reveal>
+                      <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                        Lorem ipsum dolor sit amet consectetur. Vitae volutpat
+                        pellentesque diam erat morbi sed diam feugiat. Eu
+                        habitasse commodo justo mauris dictum leo ut nisl
+                        blandit. Pretium hendrerit feugiat morbi pellentesque.
+                        Elementum at adipiscing aliquam integer rutrum.
+                      </p>
+                    </Reveal>
                   </div>
-                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Atendimento médico
-                  </h1>
-                </Reveal>
-                <Reveal>
-                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
-                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
-                    commodo justo mauris dictum leo ut nisl blandit. Pretium
-                    hendrerit feugiat morbi pellentesque. Elementum at
-                    adipiscing aliquam integer rutrum.
-                  </p>
-                </Reveal>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              );
+            })}
 
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="flex-1 bg-rose-500 p-7 sm:p-10 text-left rounded-md">
                 <Reveal>
                   <div className="w-11 h-11 bg-rose-400 text-white flex items-center justify-center rounded-full">
@@ -477,7 +483,7 @@ export default function HomePage() {
                   </p>
                 </Reveal>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </section>
@@ -639,149 +645,27 @@ export default function HomePage() {
               },
             }}
           >
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/abepom.png"
-                    alt="Convênio da Abepom"
-                    className=" object-contain"
-                  />
-                </div>
+            {convenios.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
+                    <div className="flex-1 flex items-center justify-center p-5">
+                      <img
+                        src={item.image_url}
+                        alt={`Convênio da ${item.name}`}
+                        className=" object-contain"
+                      />
+                    </div>
 
-                <div className="bg-primary-500 py-4 uppercase">
-                  <Reveal>
-                    <h1 className="text-white text-xl">Abepom saúde</h1>
-                  </Reveal>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/celos.png"
-                    alt="Convênio da Celos"
-                    className="object-contain"
-                  />
-                </div>
-
-                <Reveal>
-                  <div className="bg-primary-500 py-4 uppercase">
-                    <h1 className="text-white text-xl">Celos</h1>
+                    <div className="bg-primary-500 py-4 uppercase">
+                      <Reveal>
+                        <h1 className="text-white text-xl">{item.name}</h1>
+                      </Reveal>
+                    </div>
                   </div>
-                </Reveal>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/clinipam.png"
-                    alt="Convênio da Clinipam"
-                    className="object-contain"
-                  />
-                </div>
-
-                <div className="bg-primary-500 py-4 uppercase">
-                  <Reveal>
-                    <h1 className="text-white text-xl">Clinipam</h1>
-                  </Reveal>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/cdlsaude.png"
-                    alt="Convênio da CDL Saúde"
-                    className="object-contain"
-                  />
-                </div>
-
-                <div className="bg-primary-500 py-4 uppercase">
-                  <Reveal>
-                    <h1 className="text-white text-xl">CDL Saúde</h1>
-                  </Reveal>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/abepom.png"
-                    alt="Convênio da Abepom"
-                    className=" object-contain"
-                  />
-                </div>
-
-                <div className="bg-primary-500 py-4 uppercase">
-                  <Reveal>
-                    <h1 className="text-white text-xl">Abepom saúde</h1>
-                  </Reveal>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/celos.png"
-                    alt="Convênio da Celos"
-                    className="object-contain"
-                  />
-                </div>
-
-                <div className="bg-primary-500 py-4 uppercase">
-                  <Reveal>
-                    <h1 className="text-white text-xl">Celos</h1>
-                  </Reveal>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/clinipam.png"
-                    alt="Convênio da Clinipam"
-                    className="object-contain"
-                  />
-                </div>
-
-                <div className="bg-primary-500 py-4 uppercase">
-                  <Reveal>
-                    <h1 className="text-white text-xl">Clinipam</h1>
-                  </Reveal>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                <div className="flex-1 flex items-center justify-center p-5">
-                  <img
-                    src="/santte/convenios/cdlsaude.png"
-                    alt="Convênio da CDL Saúde"
-                    className="object-contain"
-                  />
-                </div>
-
-                <div className="bg-primary-500 py-4 uppercase">
-                  <Reveal>
-                    <h1 className="text-white text-xl">CDL Saúde</h1>
-                  </Reveal>
-                </div>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </section>

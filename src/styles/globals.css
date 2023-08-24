@@ -74,3 +74,11 @@ body {
 .default .swiper-pagination-bullet {
   @apply bg-zinc-900 !important
 }
+
+.n2Class:nth-child(2n) div {
+  @apply bg-rose-500 !important
+}
+.n2Class:nth-child(2n) .icon-service {
+  @apply bg-rose-400 !important
+}
+
