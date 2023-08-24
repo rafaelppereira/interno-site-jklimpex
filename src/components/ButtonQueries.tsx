@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CaretUp, Plus } from "phosphor-react";
 
 export function ButtonQueries() {
-  const [hasToggleMenuOptions, setHasToggleMenuOptions] = useState(true);
+  const [hasToggleMenuOptions, setHasToggleMenuOptions] = useState(false);
 
   return (
     <>
