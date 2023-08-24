@@ -10,7 +10,7 @@ export function ButtonQueries() {
         className={`${openButton
           ? "scale-100 visible opacity-100"
           : "scale-0 invisible opacity-0"
-          } origin-bottom transition-all w-full h-full backdrop-blur-sm bg-[#495E7F]/80 pt-[50px] gap-2 px-2 flex flex-col items-start justify-center rounded-tl-[50px] rounded-[7px]`}
+          } origin-bottom transition-all w-full h-full backdrop-blur-sm bg-[#495E7F]/80 pt-[50px] gap-2 px-4 flex flex-col items-start justify-center rounded-tl-[50px] rounded-[7px]`}
       >
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
