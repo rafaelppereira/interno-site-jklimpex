@@ -56,7 +56,11 @@ export default function HomePage() {
           property="og:description"
           content="A Santté Saúde foi idealizada para oferecer o melhor para você e para toda sua família Primamos pelo atendimento humanizado, conforto e qualidade!"
         />
-        <meta property="og:image" itemProp="image" content="/favicon.svg" />
+        <meta
+          property="og:image"
+          itemProp="image"
+          content="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/BSbZ7x31SqmJXdajL7Ut"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:updated_time" content="1440432930" />
       </Head>

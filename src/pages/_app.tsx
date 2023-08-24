@@ -1,4 +1,3 @@
-import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 
 import "@/styles/globals.css";
@@ -7,9 +6,11 @@ import "@/styles/globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
+// Config Toast
 import "react-modal-video/css/modal-video.css";
 import { Toaster } from "react-hot-toast";
 
+// Config Font
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
   subsets: ["latin"],
