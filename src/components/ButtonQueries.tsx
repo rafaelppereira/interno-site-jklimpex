@@ -1,86 +1,88 @@
-import { CaretUp } from "phosphor-react";
 import { useState } from "react";
+import { CaretUp, Plus } from "phosphor-react";
 
 export function ButtonQueries() {
-  const [openButton, setOpenButton] = useState(true);
+  const [hasToggleMenuOptions, setHasToggleMenuOptions] = useState(true);
 
   return (
-    <main className=" flex flex-col items-start justify-center fixed right-4 bottom-5 shadow-lg z-[999]">
+    <>
       <div
-        className={`${openButton
-          ? "scale-100 visible opacity-100"
-          : "scale-0 invisible opacity-0"
-          } origin-bottom transition-all w-full h-full backdrop-blur-sm bg-[#495E7F]/80 pt-[50px] gap-2 px-4 flex flex-col items-start justify-center rounded-tl-[50px] rounded-[7px]`}
+        className={`${
+          hasToggleMenuOptions
+            ? "scale-100 visible opacity-100"
+            : "scale-0 invisible opacity-0"
+        } backdrop-blur-md bg-primary-500/80 gap-2 px-7 pt-10 text-sm rounded-tl-[3rem] rounded-md origin-bottom transition-all flex flex-col items-start justify-center fixed right-4 bottom-24 shadow-xl border-4 border-zinc-100 z-[999]`}
       >
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
-          <p className="text-white text-xs md:text-sm font-light">
-            Consulta Médica Presencial
-          </p>
+          <p className="text-white  font-light">Consulta Médica Presencial</p>
         </div>
 
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
-          <p className="text-white text-xs md:text-sm font-light">
-            Consulta Médica Online
-          </p>
+          <p className="text-white  font-light">Consulta Médica Online</p>
         </div>
 
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
-          <p className="text-white text-xs md:text-sm font-light">Visita Domiciliar</p>
+          <p className="text-white  font-light">Visita Domiciliar</p>
         </div>
 
-        <button className="w-full h-7 bg-[#465976] text-white text-xs font-light rounded-md mb-[30px]">
+        <button className="w-full flex items-center justify-center gap-2 bg-primary-400 text-white text-sm py-3 mt-2 mb-5 font-light rounded-md hover:brightness-90 transition-all">
+          <Plus size={18} />
           Agende sua consulta
         </button>
 
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
-          <p className="text-white text-xs md:text-sm font-light">
+          <p className="text-white  font-light">
             Eletrocardiograma Monitoramento
           </p>
         </div>
 
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
-          <p className="text-white text-xs md:text-sm font-light">
+          <p className="text-white  font-light">
             Monitoramento da Apneia do Sono
           </p>
         </div>
 
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
-          <p className="text-white text-xs md:text-sm md:text-sm font-light">
+          <p className="text-white  md:text-sm font-light">
             Ultrassom com Doppler de Carótidas
           </p>
         </div>
 
         <div className="flex items-center justify-center gap-1">
           <div className="w-1 h-1 bg-[#CD9F97] rounded-full" />
-          <p className="text-white text-xs md:text-sm font-light">
+          <p className="text-white  font-light">
             Ultrassom com Doppler Membros Inf
           </p>
         </div>
 
-        <button className="w-full h-7 bg-[#465976] text-white text-xs font-light rounded-md mb-5">
-          Resultados e laudos
+        <button className="w-full flex items-center justify-center gap-2 bg-primary-400 text-white text-sm py-3 mt-2 mb-5 font-light rounded-md hover:brightness-90 transition-all">
+          <Plus size={18} /> Resultados e laudos
         </button>
       </div>
 
       <button
-        onClick={() => setOpenButton(!openButton)}
-        className="w-full  hover:brightness-90 transition-all h-12 flex items-center gap-2 justify-start pl-5 bg-primary-500 text-white text-xs font-light mt-[10px] rounded-lg"
+        onClick={() => setHasToggleMenuOptions(!hasToggleMenuOptions)}
+        className={`${
+          !hasToggleMenuOptions && "animate-bounce"
+        } fixed z-[999] right-4 bottom-5 px-6 py-4  hover:brightness-90 transition-all flex items-center gap-2 justify-start  bg-primary-500 text-white text-sm md:text-md rounded-md shadow-md`}
       >
         <CaretUp
           size={20}
           color="#FFF"
           className={
-            openButton ? "rotate-0 transition-all" : "rotate-180 transition-all"
+            hasToggleMenuOptions
+              ? "rotate-0 transition-all"
+              : "rotate-180 transition-all"
           }
         />
-        Agendamentos
+        Acessar agendamentos
       </button>
-    </main>
+    </>
   );
 }
