@@ -682,7 +682,7 @@ export default function HomePage() {
             <img
               src="/santte/imagem_medico.jpg"
               alt="Imagem do médico"
-              className="w-full  md:w-[400px] md:h-[500px] object-cover object-bottom  border-4 border-zinc-200/70"
+              className="w-full  md:w-[400px] md:h-[500px] aspect-square md:aspect-auto object-cover object-bottom  border-4 border-zinc-200/70"
             />
 
             <Reveal>
@@ -701,12 +701,12 @@ export default function HomePage() {
 
           <div>
             <Reveal>
-              <h1 className="text-3xl text-zinc-500 font-semibold">
+              <h1 className="text-2xl md:text-3xl text-zinc-500 font-semibold">
                 Responsável técnico
               </h1>
             </Reveal>
             <Reveal>
-              <p className="leading-relaxed text-lg mt-4 text-zinc-500">
+              <p className="leading-relaxed text-md md:text-lg mt-4 text-zinc-500">
                 Amet aute ut minim sint labore adipisicing proident amet. Quis
                 mollit laboris in sit voluptate irure laborum cillum qui
                 commodo. Duis dolor non ea nulla consectetur qui incididunt
