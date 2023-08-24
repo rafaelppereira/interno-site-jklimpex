@@ -1,10 +1,17 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { scrollPage } from "@/utils/scroll-page";
+import { Contact } from "@/components/plus/Contact";
+import { Reveal } from "@/components/animation/Reveal";
+import { ButtonQueries } from "@/components/ButtonQueries";
+
 import {
-  Eye,
+  X,
   List,
   Phone,
   FacebookLogo,
@@ -12,47 +19,57 @@ import {
   CircleDashed,
   InstagramLogo,
   EnvelopeSimple,
-  X,
 } from "phosphor-react";
-
-import { Reveal } from "@/components/animation/Reveal";
-import Link from "next/link";
-import { Contact } from "@/components/plus/Contact";
-import { ButtonQueries } from "@/components/ButtonQueries";
 
 export default function HomePage() {
   const [hasToggleMenuMobile, setHasToggleMenuMobile] = useState(false);
 
-  const refBanner: any = useRef();
   const refAbout: any = useRef();
+  const refBanner: any = useRef();
+  const refContact: any = useRef();
   const refServices: any = useRef();
-  const refTerceirization: any = useRef();
-  const refMissionAndVision: any = useRef();
-
-  function handleScroll(refOffsetTop: any, close?: boolean) {
-    window.scroll({
-      top: refOffsetTop.current.offsetTop - 182,
-      behavior: "smooth",
-    });
-
-    if (close) {
-      setHasToggleMenuMobile(false);
-    }
-  }
+  const refConvenios: any = useRef();
+  const refProfessionais: any = useRef();
 
   return (
     <>
       <Head>
-        <title>Início | Qualivida Gestão em Saúde</title>
+        <title>Início | Clínica Santté</title>
+        <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="A Santté Saúde foi idealizada para oferecer o melhor para você e para toda sua família Primamos pelo atendimento humanizado, conforto e qualidade! ​"
+        />
+        <meta name="author" content="Clínica Santté" />
+        <meta
+          name="keywords"
+          content="clinica, clínica, saúde, saude, santté, Santté"
+        />
+        <meta name="copyright" content="© 2024 Clínica Santté" />
+        <meta name="robots" content="all" />
+
+        <meta property="og:site_name" content="Clínica Santté" />
+        <meta property="og:title" content="Conheça o site da clínica Santté" />
+        <meta
+          property="og:description"
+          content="A Santté Saúde foi idealizada para oferecer o melhor para você e para toda sua família Primamos pelo atendimento humanizado, conforto e qualidade!"
+        />
+        <meta property="og:image" itemProp="image" content="/favicon.svg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:updated_time" content="1440432930" />
       </Head>
+
+      <ButtonQueries />
 
       <header className="fixed left-0 top-0 z-50 w-full">
         <section className="bg-primary-500 w-full h-[30px] lg:h-[50px] flex items-center ">
           <div className="flex items-center justify-between px-8 max-w-7xl w-full mx-auto ">
             <div className="hidden lg:flex items-center gap-2">
               <Link
+                href=""
                 target="_blank"
-                href="https://instagram.com/qualivida__saude?igshid=MzRlODBiNWFlZA=="
                 className="bg-primary-400 text-white/90 rounded-full p-[0.3rem] hover:brightness-90 transition-all"
                 title="Clique para ir para o nosso Instagram"
               >
@@ -60,8 +77,8 @@ export default function HomePage() {
               </Link>
 
               <Link
+                href=""
                 target="_blank"
-                href="https://www.facebook.com/qualividagestaoemsaude"
                 className="bg-primary-400 text-white/90 rounded-full p-[0.3rem] hover:brightness-90 transition-all"
                 title="Clique para ir para o nosso Facebook"
               >
@@ -69,8 +86,8 @@ export default function HomePage() {
               </Link>
 
               <Link
+                href=""
                 target="_blank"
-                href="https://api.whatsapp.com/send?phone=554830244370"
                 className="bg-primary-400 text-white/90 rounded-full p-[0.3rem] hover:brightness-90 transition-all"
                 title="Clique para ir para o nosso Whatsapp"
               >
@@ -96,13 +113,13 @@ export default function HomePage() {
               <img
                 className="h-[120px] lg:h-[120px] aspect-square select-none"
                 src="/logo.svg"
-                alt="Qualivida Gestão em Saúde"
+                alt="Clínica Santté"
               />
             </figure>
 
             <div className="hidden lg:flex items-center text-[15px] text-gray-500 font-light">
               <button
-                onClick={() => handleScroll(refBanner)}
+                onClick={() => scrollPage(refBanner, setHasToggleMenuMobile)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4 text-primary-500 font-normal"
               >
                 Início
@@ -110,33 +127,35 @@ export default function HomePage() {
 
               <button
                 type="button"
-                onClick={() => handleScroll(refAbout)}
+                onClick={() => scrollPage(refAbout, setHasToggleMenuMobile)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 h-[120px] leading-[120px] px-4"
               >
                 Quem somos
               </button>
 
               <button
-                onClick={() => handleScroll(refMissionAndVision)}
+                onClick={() => scrollPage(refServices, setHasToggleMenuMobile)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
               >
                 Serviços
               </button>
               <button
-                onClick={() => handleScroll(refTerceirization)}
+                onClick={() =>
+                  scrollPage(refProfessionais, setHasToggleMenuMobile)
+                }
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
               >
                 Especialistas
               </button>
               <button
-                onClick={() => handleScroll(refServices)}
+                onClick={() => scrollPage(refConvenios, setHasToggleMenuMobile)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
               >
                 Convênios
               </button>
 
               <button
-                onClick={() => handleScroll(refServices)}
+                onClick={() => scrollPage(refContact, setHasToggleMenuMobile)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
               >
                 Contato
@@ -144,8 +163,8 @@ export default function HomePage() {
             </div>
 
             <Link
+              href=""
               target="_blank"
-              href="https://api.whatsapp.com/send?phone=554830244370"
               title="Clique para entrar em contato"
               className="hidden xl:flex bg-secondary-500 items-center gap-2 text-white px-7 py-3 text-sm rounded-md hover:brightness-90 transition-all"
             >
@@ -169,25 +188,51 @@ export default function HomePage() {
                   : "opacity-0 invisible"
               } md:hidden transition-all absolute left-0 top-[165px] w-full px-5 py-8 bg-primary-500 flex flex-col gap-3 text-white uppercase`}
             >
-              <button onClick={() => handleScroll(refBanner, true)}>
+              <button
+                onClick={() =>
+                  scrollPage(refBanner, setHasToggleMenuMobile, true)
+                }
+              >
                 Início
               </button>
 
               <button
                 type="button"
-                onClick={() => handleScroll(refAbout, true)}
+                onClick={() =>
+                  scrollPage(refAbout, setHasToggleMenuMobile, true)
+                }
               >
                 Quem somos
               </button>
 
-              <button onClick={() => handleScroll(refMissionAndVision, true)}>
-                Missão e Visão
-              </button>
-              <button onClick={() => handleScroll(refTerceirization, true)}>
-                Terceirização em Saúde
-              </button>
-              <button onClick={() => handleScroll(refServices, true)}>
+              <button
+                onClick={() =>
+                  scrollPage(refServices, setHasToggleMenuMobile, true)
+                }
+              >
                 Serviços
+              </button>
+              <button
+                onClick={() =>
+                  scrollPage(refProfessionais, setHasToggleMenuMobile, true)
+                }
+              >
+                Especialistas
+              </button>
+              <button
+                onClick={() =>
+                  scrollPage(refConvenios, setHasToggleMenuMobile, true)
+                }
+              >
+                Convênios
+              </button>
+
+              <button
+                onClick={() =>
+                  scrollPage(refContact, setHasToggleMenuMobile, true)
+                }
+              >
+                Contato
               </button>
             </div>
           </div>
@@ -239,10 +284,6 @@ export default function HomePage() {
         </Swiper>
       </section>
 
-      <div>
-        <ButtonQueries />
-      </div>
-
       <section className="py-16 md:py-20" ref={refAbout}>
         <div className="container flex flex-col-reverse md:flex-row items-center gap-20">
           <div className="flex-1 w-full ">
@@ -278,7 +319,7 @@ export default function HomePage() {
 
       <section
         className="py-20 bg-zinc-100/50 border-t-2 border-b-2 border-zinc-200"
-        ref={refMissionAndVision}
+        ref={refServices}
       >
         <div className="container flex justify-center">
           <Reveal>
@@ -437,7 +478,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20" ref={refTerceirization}>
+      <section className="py-20" ref={refProfessionais}>
         <div className="container flex flex-col md:flex-row gap-16 items-start">
           <div className="flex-1 md:sticky md:top-[350px]">
             <Reveal>
@@ -566,8 +607,8 @@ export default function HomePage() {
       </section>
 
       <section
+        ref={refConvenios}
         className="py-20 bg-zinc-100/50 border-t-2 border-b-2 border-zinc-200"
-        ref={refMissionAndVision}
       >
         <div className="container flex justify-center">
           <Reveal>
@@ -745,8 +786,8 @@ export default function HomePage() {
         <div className="container flex flex-col md:flex-row items-center gap-20">
           <div className="relative rounded-md shrink-0 w-full sm:w-auto">
             <img
-              src="/qualivida/alan_retrato.jpg"
-              alt="Imagem de Alan Bub Cabral"
+              src="/santte/imagem_medico.jpg"
+              alt="Imagem do médico"
               className="w-full  md:w-[400px] md:h-[500px] object-cover object-bottom  border-4 border-zinc-200/70"
             />
 
@@ -792,7 +833,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Contact />
+      <div ref={refContact}>
+        <Contact />
+      </div>
 
       <footer className="bg-primary-500 border-t-2 border-zinc-200">
         <div className="container ">
@@ -813,25 +856,29 @@ export default function HomePage() {
               <div className="flex flex-col gap-2 text-white text-center md:text-left">
                 <h2 className="text-xl font-medium">Menu</h2>
                 <button
-                  onClick={() => handleScroll(refAbout)}
+                  onClick={() => scrollPage(refAbout, setHasToggleMenuMobile)}
                   className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   Quem somos
                 </button>
                 <button
-                  onClick={() => handleScroll(refMissionAndVision)}
+                  onClick={() =>
+                    scrollPage(refServices, setHasToggleMenuMobile)
+                  }
                   className="mt-2 text-center md:text-left font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   Serviços
                 </button>
                 <button
-                  onClick={() => handleScroll(refTerceirization)}
+                  onClick={() =>
+                    scrollPage(refProfessionais, setHasToggleMenuMobile)
+                  }
                   className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   Especialistas
                 </button>
                 <button
-                  onClick={() => handleScroll(refServices)}
+                  onClick={() => scrollPage(refContact, setHasToggleMenuMobile)}
                   className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   Contato
@@ -843,7 +890,7 @@ export default function HomePage() {
                 <h2>Redes sociais</h2>
                 <Link
                   target="_blank"
-                  href="https://instagram.com/qualivida__saude?igshid=MzRlODBiNWFlZA=="
+                  href=""
                   className="mt-2 flex items-center gap-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   <InstagramLogo size={24} />
@@ -851,7 +898,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   target="_blank"
-                  href="https://www.facebook.com/qualividagestaoemsaude"
+                  href=""
                   className="mt-2 flex items-center gap-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   <FacebookLogo size={24} />
@@ -859,7 +906,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   target="_blank"
-                  href="https://api.whatsapp.com/send?phone=554830244370"
+                  href=""
                   className="mt-2 flex items-center gap-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   <WhatsappLogo size={24} />
@@ -872,14 +919,14 @@ export default function HomePage() {
                 <h2>Contato</h2>
                 <Link
                   target="_blank"
-                  href="https://api.whatsapp.com/send?phone=554830244370"
+                  href=""
                   className="mt-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   Whatsapp
                 </Link>
                 <Link
                   target="_blank"
-                  href="mailto:atendimento@qualividagestaosaude.com"
+                  href="mailto:atendimento@clinicasantte.com"
                   className="mt-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   E-mail
