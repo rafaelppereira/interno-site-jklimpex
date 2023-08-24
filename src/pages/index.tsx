@@ -160,6 +160,10 @@ export default function HomePage() {
                 Convênios
               </button>
 
+              <button className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4">
+                Estética
+              </button>
+
               <button
                 onClick={() => scrollPage(refContact, setHasToggleMenuMobile)}
                 className="uppercase border-b-4 border-white hover:border-primary-500 transition-all h-[120px] leading-[120px] px-4"
@@ -232,6 +236,8 @@ export default function HomePage() {
               >
                 Convênios
               </button>
+
+              <button>Estética</button>
 
               <button
                 onClick={() =>
