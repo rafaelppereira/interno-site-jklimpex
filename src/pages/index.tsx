@@ -838,7 +838,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal>
               <span className="text-sm text-zinc-400 mt-2 font-light">
-                Desenvolvido por Alpha tecnologia
+                Desenvolvido por Nitro tecnologia
               </span>
             </Reveal>
           </div>
