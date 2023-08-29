@@ -67,6 +67,11 @@ body {
   @apply bg-zinc-200
 }
 
+.default {
+  display: flex;
+  align-items: center;
+}
+
 .default .swiper-slide {
   padding-bottom: 50px;
 }
@@ -80,5 +85,14 @@ body {
 }
 .n2Class:nth-child(2n) .icon-service {
   @apply bg-rose-400 !important
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-400 rounded-full
 }
 

@@ -348,7 +348,8 @@ export default function HomePage() {
             spaceBetween={20}
             slidesPerView={1}
             pagination={true}
-            className="default "
+            autoHeight={true}
+            className="default"
             modules={[Autoplay, Pagination]}
             breakpoints={{
               768: {
@@ -357,27 +358,7 @@ export default function HomePage() {
             }}
           >
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
-                <Reveal>
-                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
-                    <CircleDashed size={23} />
-                  </div>
-                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Consulta Domiciliar
-                  </h1>
-                </Reveal>
-                <Reveal>
-                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    É um atendimento médico realizado em casa. O serviço é
-                    realizado por profissionais da saúde e serve para facilitar
-                    o acesso ao suporte necessário.
-                  </p>
-                </Reveal>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-primary-500 overflow-y-auto flex-1 bg-primary-500 p-6 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -411,7 +392,7 @@ export default function HomePage() {
             </SwiperSlide>
 
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-rose-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -464,7 +445,7 @@ export default function HomePage() {
             </SwiperSlide>
 
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-primary-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -516,7 +497,7 @@ export default function HomePage() {
             </SwiperSlide>
 
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-rose-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -578,7 +559,7 @@ export default function HomePage() {
             </SwiperSlide>
 
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-primary-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -668,7 +649,7 @@ export default function HomePage() {
             </SwiperSlide>
 
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-rose-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -702,7 +683,7 @@ export default function HomePage() {
             </SwiperSlide>
 
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-primary-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -744,7 +725,7 @@ export default function HomePage() {
             </SwiperSlide>
 
             <SwiperSlide className="n2Class">
-              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+              <div className="h-[350px] border-b-[1rem] border-rose-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
                   <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
@@ -773,6 +754,26 @@ export default function HomePage() {
                     dia do exame, o paciente deve chegar 10 minutos antes do
                     horário marcado e trazer o pedido médico, documento de
                     identidade e a carteira do convênio.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="n2Class">
+              <div className="h-[350px] border-b-[1rem] border-primary-500 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Consulta Domiciliar
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    É um atendimento médico realizado em casa. O serviço é
+                    realizado por profissionais da saúde e serve para facilitar
+                    o acesso ao suporte necessário.
                   </p>
                 </Reveal>
               </div>
