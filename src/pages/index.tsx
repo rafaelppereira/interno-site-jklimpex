@@ -504,7 +504,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-zinc-500">
-                Nossos especialistas
+                Nossas especialidades
               </h2>
             </Reveal>
             <Reveal>
@@ -534,9 +534,13 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Dr. Rafael Meirelles
+                    Cardiologia
                   </h2>
-                  <p>Médico Cardiologista | Responsável Técnico</p>
+                  <p>
+                    Consultas, diagnóstico por imagem, avaliação cardiológica
+                    para prática esportiva, métodos gráficos, ergometria,
+                    checkup cardiológico, avaliação cardiológica pré operatória
+                  </p>
                 </div>
               </Reveal>
 
@@ -547,9 +551,12 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Dra. Lenira Maluf
+                    Cirurgião Vascular
                   </h2>
-                  <p>Biomédica Especialista em Estética Avançada</p>
+                  <p>
+                    Consultas, diagnóstico por imagem, procedimentos vasculares
+                    em consultório.
+                  </p>
                 </div>
               </Reveal>
 
@@ -560,9 +567,13 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Dr. Gabriel Fázzeri
+                    Nutrição
                   </h2>
-                  <p>Médico Cardiologista</p>
+                  <p>
+                    Consultas, acompanhamento mensal, avaliação e acompanhamento
+                    nutricional pré e pós operatório, nutrição esportiva,
+                    bioimpedância
+                  </p>
                 </div>
               </Reveal>
 
@@ -573,9 +584,13 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Carline Moesch
+                    Psicologia
                   </h2>
-                  <p>Nutricionista</p>
+                  <p>
+                    Consultas, acompanhamento psicoterapêutico, avaliação e
+                    acompanhamento pré e pós operatório, atendimento familiar,
+                    psicoterapia para casais, atendimento infantil.
+                  </p>
                 </div>
               </Reveal>
 
@@ -586,9 +601,12 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Ingrid Maciel
+                    Psiquiatria
                   </h2>
-                  <p>Psicóloga</p>
+                  <p>
+                    Consultas, avaliação diagnóstica, acompanhamento
+                    terapêutico.
+                  </p>
                 </div>
               </Reveal>
 
@@ -599,9 +617,9 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Dr Pedro Ceretta
+                    Clinico Geral
                   </h2>
-                  <p>Médico Cirurgião Vascular</p>
+                  <p>Consulta, acompanhamento de rotina.</p>
                 </div>
               </Reveal>
 
@@ -612,9 +630,9 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Dra Thaynara R Fagundes
+                    Dermatologista
                   </h2>
-                  <p>Psiquiatra</p>
+                  <p>Consultas, procedimento em consultório</p>
                 </div>
               </Reveal>
             </div>
@@ -838,7 +856,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal>
               <span className="text-sm text-zinc-400 mt-2 font-light">
-                Desenvolvido por Nitro tecnologia
+                Feito por Nitro desenvolvimentos
               </span>
             </Reveal>
           </div>
