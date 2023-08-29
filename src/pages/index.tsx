@@ -316,13 +316,14 @@ export default function HomePage() {
             <Reveal>
               <p className="mt-4 text-zinc-500 leading-relaxed text-md sm:text-lg">
                 A Santté Saúde foi idealizada para oferecer o melhor para você e
-                para toda sua família Primamos pelo atendimento humanizado,
-                conforto e qualidade! ​ <br />
-                <br />
-                Somos uma Equipe de Profissionais Especializados nas Áreas da
-                Saúde e Bem estar: Cardiologia, Cirurgião vascular, Estética
-                avançada, Nutrição e Psicologia. ​ <br />
-                <br />​ Um novo espaço em Palhoça SC! Agende a Sua Consulta!
+                para toda sua família Priorizamos pelo atendimento humanizado,
+                conforto e qualidade!
+                <br /> <br />
+                Somos uma Clínica especializada em consultas e exames em
+                Cardiologia, além do atendimento de outras especialidades. Somos
+                referência em cardiologia para realizar diagnósticos,
+                tratamentos e abordagens clínicas de forma humanizada, com foco
+                na segurança, conforto e bem- estar do paciente.
               </p>
             </Reveal>
           </div>
@@ -355,141 +356,427 @@ export default function HomePage() {
               },
             }}
           >
-            {servicesContent.map((item, index) => {
-              return (
-                <SwiperSlide key={index} className="n2Class">
-                  <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
-                    <Reveal>
-                      <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
-                        <CircleDashed size={23} />
-                      </div>
-                      <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                        Atendimento médico
-                      </h1>
-                    </Reveal>
-                    <Reveal>
-                      <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                        Lorem ipsum dolor sit amet consectetur. Vitae volutpat
-                        pellentesque diam erat morbi sed diam feugiat. Eu
-                        habitasse commodo justo mauris dictum leo ut nisl
-                        blandit. Pretium hendrerit feugiat morbi pellentesque.
-                        Elementum at adipiscing aliquam integer rutrum.
-                      </p>
-                    </Reveal>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-
-            {/* <SwiperSlide>
-              <div className="flex-1 bg-rose-500 p-7 sm:p-10 text-left rounded-md">
-                <Reveal>
-                  <div className="w-11 h-11 bg-rose-400 text-white flex items-center justify-center rounded-full">
-                    <CircleDashed size={23} />
-                  </div>
-                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Procedimentos
-                  </h1>
-                </Reveal>
-                <Reveal>
-                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
-                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
-                    commodo justo mauris dictum leo ut nisl blandit. Pretium
-                    hendrerit feugiat morbi pellentesque. Elementum at
-                    adipiscing aliquam integer rutrum.
-                  </p>
-                </Reveal>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
+            <SwiperSlide className="n2Class">
               <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
-                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
                   </div>
                   <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Atendimento remoto
+                    Consulta Domiciliar
                   </h1>
                 </Reveal>
                 <Reveal>
                   <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
-                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
-                    commodo justo mauris dictum leo ut nisl blandit. Pretium
-                    hendrerit feugiat morbi pellentesque. Elementum at
-                    adipiscing aliquam integer rutrum.
+                    É um atendimento médico realizado em casa. O serviço é
+                    realizado por profissionais da saúde e serve para facilitar
+                    o acesso ao suporte necessário.
                   </p>
                 </Reveal>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className="n2Class">
               <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
-                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
                   </div>
                   <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Atendimento médico
+                    Ecocardiograma Transtorácico com Color Doppler
                   </h1>
                 </Reveal>
                 <Reveal>
                   <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
-                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
-                    commodo justo mauris dictum leo ut nisl blandit. Pretium
-                    hendrerit feugiat morbi pellentesque. Elementum at
-                    adipiscing aliquam integer rutrum.
+                    É um exame cardiológico de imagem que utiliza a técnica do
+                    ultrassom. É realizado por médico cardiologista com
+                    especialização em imagem. Permite o rastreamento de
+                    cardiopatias (doenças do coração) de forma não invasiva,
+                    rápida e confortável, sem necessidade de contrastes ou
+                    radiação.
+                    <br />
+                    <strong>Preparo para o exame:</strong> O Ecocardiograma é um
+                    procedimento diagnóstico não invasivo e, portanto, não há
+                    necessidade de suspensão de medicamentos ou preparo para
+                    realização do procedimento.
+                    <br />
+                    <strong>Orientações</strong> Este exame é realizado somente
+                    com agendamento prévio. No dia do Ecocardiograma, o paciente
+                    deve chegar 10 minutos antes do horário marcado e trazer o
+                    pedido médico, documento de identidade e a carteira do
+                    convênio.
                   </p>
                 </Reveal>
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
-              <div className="flex-1 bg-rose-500 p-7 sm:p-10 text-left rounded-md">
-                <Reveal>
-                  <div className="w-11 h-11 bg-rose-400 text-white flex items-center justify-center rounded-full">
-                    <CircleDashed size={23} />
-                  </div>
-                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Procedimentos
-                  </h1>
-                </Reveal>
-                <Reveal>
-                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
-                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
-                    commodo justo mauris dictum leo ut nisl blandit. Pretium
-                    hendrerit feugiat morbi pellentesque. Elementum at
-                    adipiscing aliquam integer rutrum.
-                  </p>
-                </Reveal>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
+            <SwiperSlide className="n2Class">
               <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
                 <Reveal>
-                  <div className="w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
                     <CircleDashed size={23} />
                   </div>
                   <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Atendimento remoto
+                    Eletrocardiograma (ECG) de repouso
                   </h1>
                 </Reveal>
                 <Reveal>
                   <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Lorem ipsum dolor sit amet consectetur. Vitae volutpat
-                    pellentesque diam erat morbi sed diam feugiat. Eu habitasse
-                    commodo justo mauris dictum leo ut nisl blandit. Pretium
-                    hendrerit feugiat morbi pellentesque. Elementum at
-                    adipiscing aliquam integer rutrum.
+                    Recebe várias denominações: ECG basal, ECG de superfície,
+                    ECG convencional ou, simplesmente, Eletrocardiograma.
+                    Trata-se de exame não invasivo, de realização rápida e
+                    fácil. Esse exame registra a atividade elétrica do coração e
+                    pode prover informações sobre o diagnóstico de problemas
+                    estruturais cardíacos, isquemia miocárdica, distúrbios
+                    eletrofisiológicos do miocárdio, doenças do pericárdio,
+                    posicionamento do coração, estimulação cardíaca artificial,
+                    alterações metabólicas e eletrolíticas sistêmicas, além de
+                    documentação de influências autonômicas e farmacológicas
+                    (tóxicas ou terapêuticas).
+                    <br />
+                    <br />
+                    <strong>Indicações para o Eletrocardiograma:</strong>
+                    <br />O Eletrocardiograma é complementar ao processo de
+                    diagnóstico de uma consulta cardiológica. Por isso, antes de
+                    uma consulta com o cardiologista, é necessária a sua
+                    realização. O ECG, habitualmente, é solicitado ao paciente
+                    antes de um procedimento cirúrgico, na etapa de preparo
+                    pré-operatório.
+                    <br />
+                    <br />
+                    <strong>Preparo para o exame:</strong>
+                    <br />O Eletrocardiograma é um exame não invasivo. Portanto,
+                    não há necessidade de suspensão de medicamentos ou preparo
+                    para a sua realização. Em alguns casos, pode ser necessária
+                    a tricotomia (corte de pelos) do tórax, para reduzir e
+                    interferência dos registros elétricos.
+                    <br />
+                    <br />
+                    <strong>Orientações:</strong>
+                    <br />
+                    Este exame não requer agendamento prévio e o laudo fica
+                    pronto em 24 horas. No dia do exame, o paciente deve portar:
+                    pedido médico, documento de identidade e carteira do
+                    convênio.
                   </p>
                 </Reveal>
               </div>
-            </SwiperSlide> */}
+            </SwiperSlide>
+
+            <SwiperSlide className="n2Class">
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Holter 24h
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    É um exame que registra o eletrocardiograma por 24 horas. É
+                    indicado para diagnosticar distúrbios na condução elétrica
+                    do coração, como arritmias, bloqueios e falhas nos
+                    batimentos, mas que acontecem de maneira intermitente, ou
+                    seja, para os quais o eletrocardiograma convencional,
+                    realizado por poucos segundos, não foi capaz de
+                    diagnosticar. O exame de Holter é realizado com a instalação
+                    de eletrodos adesivos no tórax, ligados a um pequeno
+                    aparelho que ficará preso na cintura.
+                    <br />
+                    <br />
+                    <strong>Preparo para o exame Holter 24H:</strong>
+                    <br />O Holter 24h é um procedimento diagnóstico não
+                    invasivo e, portanto, não há necessidade de suspensão de
+                    medicamentos para realização do procedimento.
+                    <br />
+                    <br />
+                    <strong>Orientações:</strong>
+                    <br />
+                    O exame Holter é realizado somente com agendamento prévio.
+                    No dia do exame, o paciente deverá: <br /> chegar 10 minutos
+                    antes do horário marcado; <br />
+                    trazer pedido médico, documento de identidade e carteira do
+                    convênio; <br />
+                    TRAZER UM CINTO, independente do tipo de roupa utilizada
+                    (para que o aparelho possa ser fixado na sua cintura);{" "}
+                    <br />
+                    NÃO será possível tomar banho durante a utilização do
+                    aparelho; <br />
+                    NÃO passar creme na região do tórax; <br />
+                    NÃO é recomendável dormir em colchão magnético; <br />
+                    Deverá EVITAR o uso de decotes ou vestidos; <br />
+                    EVITAR atividade física extenuante. <br />
+                    No dia do exame, o paciente receberá todas as orientações
+                    necessárias para a sua correta realização.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="n2Class">
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    MAPA 24h
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    É um exame onde se registram medidas seriadas da pressão
+                    arterial durante o dia e à noite. Normalmente, é realizado
+                    quando há dúvidas se as pressões medidas no consultório e de
+                    modo eventual estão realmente elevadas em outras ocasiões –
+                    ou se é algo momentâneo (Hipertensão do jaleco branco). Este
+                    exame também é indicado para avaliar a eficácia da medicação
+                    em pacientes já diagnosticados com hipertensão, ou seja,
+                    para saber se as medicações estão conseguindo manter as
+                    pressões controladas durante o dia e à noite. Desta forma, o
+                    médico poderá realizar modificações personalizadas nos
+                    horários ou nos tipos de medicamentos, a fim de obter um
+                    melhor controle da doença. O MAPA 24h é realizado com a
+                    instalação de uma braçadeira para a medição da pressão no
+                    braço esquerdo. Esta braçadeira estará conectada a um
+                    pequeno aparelho preso na cintura.
+                    <br />
+                    <br />
+                    <strong>Preparo para o exame Mapa 24H:</strong>
+                    <br />O MAPA é um procedimento diagnóstico não invasivo.
+                    Portanto, não há necessidade de suspensão de medicamentos
+                    para a sua realização, EXCETO em caso de outra orientação
+                    por parte do seu médico.
+                    <br />
+                    <br />
+                    <strong>Orientações:</strong> <br />
+                    Este exame é realizado somente com agendamento prévio. No
+                    dia do exame, o paciente deverá: <br />
+                    <br />
+                    chegar 15 minutos antes do horário marcado; <br />
+                    trazer pedido médico, documento de identidade e carteira do
+                    convênio; <br />
+                    TRAZER UM CINTO, independente do tipo de roupa utilizada
+                    para que o aparelho possa ser fixado na sua cintura); <br />
+                    NÃO será possível tomar banho durante a utilização do
+                    aparelho; <br />
+                    NÃO é recomendável dormir em colchão magnético; <br />
+                    Deverá EVITAR o uso de decotes ou vestidos apertados; <br />
+                    EVITAR atividade física extenuante. <br />
+                    No momento em que o aparelho iniciar uma medida, é altamente
+                    indicado que o braço onde está a braçadeira fique relaxado e
+                    imóvel até a total desinsuflação. Caso contrário, o aparelho
+                    tentará aumentar a compressão no local ou poderá não fazer a
+                    leitura correta da pressão. No dia do exame de MAPA o
+                    paciente receberá todas as orientações necessárias para a
+                    sua correta realização <br /> <br />
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="n2Class">
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Teste Ergométrico
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    Também conhecido como Teste de Esforço ou Teste de Esteira,
+                    é um procedimento no qual o paciente é submetido a um
+                    esforço físico programado e individualizado. Tem como
+                    finalidade avaliar as respostas clínica, hemodinâmica,
+                    eletrocardiográfica e metabólica ao exercício.
+                    <br />
+                    <br />
+                    <strong>Como é realizado o Teste Ergométrico:</strong>
+                    <br />
+                    Para uma melhor qualidade do traçado eletrocardiográfico, o
+                    preparo da pele para fixação dos eletrodos é fundamental.
+                    Algumas vezes, é necessário raspar os pêlos de alguns pontos
+                    do tórax e do abdome e friccionar a pele com gaze e álcool
+                    em seguida é passado uma lixa para remover a oleosidade
+                    natural destas áreas, onde serão colocados eletrodos
+                    descartáveis. No Teste Ergométrico, o paciente caminhará em
+                    uma esteira ergométrica e, progressivamente, o médico
+                    aumentará a velocidade e/ou a inclinação da esteira até o
+                    limite do esforço tolerado. A interrupção do teste
+                    ergométrico pode ser solicitada a qualquer momento, devido
+                    ao cansaço ou outro motivo. Além disso, o próprio médico que
+                    acompanha o exame pode interromper o teste, se julgar
+                    necessário. Durante todo o exame, o médico estará
+                    monitorando o eletrocardiograma, a pressão arterial, a
+                    frequência cardíaca e a condição clínica do paciente.
+                    <br />
+                    <br />
+                    <strong>Riscos ao Paciente:</strong>
+                    <br />
+                    Apesar de todos os cuidados na realização deste exame,
+                    alguns incidentes podem ocorrer. Entre eles, queda da
+                    esteira ou alterações clínicas, como resposta anormal da
+                    pressão arterial, arritmias, angina do peito, tontura ou
+                    desmaio. O exame de Teste Ergométrico pode identificar a
+                    grande maioria dos pacientes que apresentam doença
+                    coronariana importante e, assim, salvar muitas vidas.
+                    Contudo, raramente podem ocorrer complicações, como
+                    arritmias graves, infarto e/ou morte. Estes casos
+                    excepcionais (menos de 0,01% de óbitos nas estatísticas
+                    mundiais) geralmente estão associados à doença cardíaca
+                    grave. Assim, estes indivíduos podem apresentar as mesmas
+                    complicações em qualquer outra circunstância – geralmente,
+                    longe dos recursos necessários para revertê-las. Para estas
+                    situações, dispomos de equipamentos de ressuscitação e
+                    profissionais habilitados para intervir, se necessário.
+                    <br />
+                    <br />
+                    <strong>Orientações para o exame:</strong>
+                    <br />
+                    Comparecer com 10 minutos de antecedência ao horário
+                    agendado; <br />
+                    Para maior conforto durante o exame, recomenda-se o uso de
+                    traje esportivo e tênis; <br />
+                    Os homens farão o exame com o tórax desnudo e as mulheres
+                    devem trajar top ou sutiã; <br />
+                    Os homens será necessário a tricotomia (corte de pelos) do
+                    tórax; <br />
+                    Sugere-se também que se traga uma toalha de rosto; <br />
+                    Não fumar ao menos por 3h antes do exame; <br />
+                    Não realizar o exame em jejum; <br />
+                    Fazer uma refeição leve antes do exame; <br />
+                    Evitar beber café, chá preto ou bebidas alcoólicas no dia do
+                    exame; <br />
+                    Não realizar esforço não habitual por 12h antes do exame;{" "}
+                    <br />
+                    Se estiver em uso de medicamentos, levar os nomes para
+                    informar ao médico; <br />
+                    Não deixar de tomar os medicamentos em uso, a menos que
+                    solicitado pelo médico; <br />
+                    24h antes do exame, não usar cremes, bronzeadores ou
+                    substâncias oleosas sobre o tórax; <br />
+                    Pacientes menores de 18 anos devem estar acompanhados pelo
+                    seu responsável ou representante legal.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="n2Class">
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Ultrassom com Doppler de Carótidas e vertebrais
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    É um exame realizado para a avaliação das artérias carótidas
+                    e vertebrais de forma não invasiva. Permite ao médico
+                    analisar a anatomia (incluindo a presença de placas de
+                    gordura na parede dos vasos) e o comportamento do fluxo
+                    sanguíneo.
+                    <br />
+                    <br />
+                    <strong>Preparo para o exame:</strong>
+                    <br />O doppler de carótidas é um procedimento diagnóstico
+                    não invasivo e, portanto, não há necessidade de suspensão de
+                    medicamentos ou preparo para realização do procedimento.
+                    <br />
+                    <strong>Orientações:</strong> <br />
+                    Este exame é realizado somente com agendamento prévio. No
+                    dia do exame, o paciente deve chegar 10 minutos antes do
+                    horário marcado e trazer o pedido médico, documento de
+                    identidade e a carteira do convênio.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="n2Class">
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Ultrassom com doppler venoso ou arterial dos membros
+                    inferiores
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    É um exame utilizado principalmente para investigar a causa
+                    de inchaços e dores persistentes nas pernas, comumente
+                    associados às varizes. A principal preocupação nesses casos
+                    é a formação de coágulos nas veias, inclusive com risco de
+                    vida.
+                    <br />
+                    <br />
+                    Além de detectar coágulos intravenosos, o ecodoppler venoso
+                    de membros inferiores também é capaz de avaliar todo o
+                    sistema vascular da região das pernas e identificar outras
+                    doenças.
+                    <br />
+                    <br />
+                    <strong>Preparo para o exame:</strong>
+                    <br />O doppler é um procedimento diagnóstico não invasivo
+                    e, portanto, não há necessidade de suspensão de medicamentos
+                    ou preparo para realização do procedimento.
+                    <br />
+                    <strong>Orientações:</strong>
+                    <br />
+                    Este exame é realizado somente com agendamento prévio. No
+                    dia do exame, o paciente deve chegar 10 minutos antes do
+                    horário marcado e trazer o pedido médico, documento de
+                    identidade e a carteira do convênio.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="n2Class">
+              <div className="flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
+                <Reveal>
+                  <div className="icon-service w-11 h-11 bg-primary-400 text-white flex items-center justify-center rounded-full">
+                    <CircleDashed size={23} />
+                  </div>
+                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
+                    Ultrassonografia geral
+                  </h1>
+                </Reveal>
+                <Reveal>
+                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
+                    É o exame de ultrassom que utiliza ondas sonoras para gerar
+                    imagens do corpo humano.
+                    <br />
+                    <br />É um método muito utilizado para prevenção,
+                    tratamento, diagnóstico e para avaliação de estruturas e
+                    partes do corpo humano.
+                    <br />
+                    <br />
+                    <strong>Preparo para o exame:</strong>
+                    <br />é um procedimento diagnóstico não invasivo e,
+                    portanto, as orientações do exame variam de acordo com a
+                    região a ser examinada pelo profissional.
+                    <br />
+                    <strong>Orientações: </strong> <br />
+                    Este exame é realizado somente com agendamento prévio. No
+                    dia do exame, o paciente deve chegar 10 minutos antes do
+                    horário marcado e trazer o pedido médico, documento de
+                    identidade e a carteira do convênio.
+                  </p>
+                </Reveal>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
       </section>
