@@ -21,7 +21,6 @@ import {
   EnvelopeSimple,
 } from "phosphor-react";
 import { convenios } from "@/utils/content/convenios";
-import { servicesContent } from "@/utils/content/servicos";
 
 export default function HomePage() {
   const [hasToggleMenuMobile, setHasToggleMenuMobile] = useState(false);
@@ -298,14 +297,111 @@ export default function HomePage() {
 
       <section className="py-16 md:py-20" ref={refAbout}>
         <div className="container flex flex-col-reverse md:flex-row items-center gap-20">
-          <div className="flex-1 w-full ">
-            <Reveal>
-              <img
-                src="/santte/image_about.png"
-                alt="Imagem da Clínica Santté"
-                className="w-full h-full object-cover rounded-lg "
-              />
-            </Reveal>
+          <div className="flex-1 md:w-1/2 w-full">
+            <Swiper
+              effect="fade"
+              spaceBetween={50}
+              slidesPerView={1}
+              pagination={true}
+              autoHeight={true}
+              className="default"
+              modules={[Autoplay, Pagination]}
+              breakpoints={{
+                768: {
+                  slidesPerView: 1,
+                },
+              }}
+            >
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica01.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica02.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica03.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica04.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica05.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica06.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica07.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica08.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <Reveal>
+                  <img
+                    src="/santte/clinica09.JPG"
+                    alt="Imagem da Clínica Santté"
+                    className="w-full h-full object-cover rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+            </Swiper>
           </div>
           <div className="flex-1">
             <Reveal>
@@ -986,7 +1082,7 @@ export default function HomePage() {
         <div className="container flex flex-col md:flex-row items-center gap-20">
           <div className="relative rounded-md shrink-0 w-full sm:w-auto">
             <img
-              src="/santte/imagem_medico.jpg"
+              src="/santte/medico.JPG"
               alt="Imagem do médico"
               className="w-full  md:w-[400px] md:h-[500px] aspect-square md:aspect-auto object-cover object-bottom  border-4 border-zinc-200/70"
             />
