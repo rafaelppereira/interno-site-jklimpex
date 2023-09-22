@@ -46,7 +46,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-primary-500 !important;
+  @apply bg-zinc-500 !important;
   width: 2rem !important;
   height: 0.75rem !important;
   border-radius: 9999px !important;
@@ -81,10 +81,10 @@ body {
 }
 
 .n2Class:nth-child(2n) div {
-  @apply bg-rose-500 !important
+  @apply bg-zinc-600 !important
 }
 .n2Class:nth-child(2n) .icon-service {
-  @apply bg-rose-400 !important
+  @apply bg-zinc-500 !important
 }
 
 ::-webkit-scrollbar {
