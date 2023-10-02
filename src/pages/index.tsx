@@ -171,14 +171,14 @@ export default function HomePage() {
                 hasToggleMenuMobile
                   ? "opacity-100 visible"
                   : "opacity-0 invisible"
-              } md:hidden transition-all absolute left-0 top-[165px] w-full px-5 py-8 bg-primary-500 flex flex-col gap-3 text-white uppercase`}
+              } md:hidden uppercase transition-all absolute left-0 top-[165px] w-full px-5 py-8 bg-zinc-700 flex flex-col gap-3 text-white`}
             >
               <button
                 onClick={() =>
                   scrollPage(refBanner, setHasToggleMenuMobile, true)
                 }
               >
-                Início
+                INÍCIO
               </button>
 
               <button
@@ -187,7 +187,7 @@ export default function HomePage() {
                   scrollPage(refAbout, setHasToggleMenuMobile, true)
                 }
               >
-                Quem somos
+                QUEM SOMOS
               </button>
 
               <button
@@ -195,31 +195,15 @@ export default function HomePage() {
                   scrollPage(refServices, setHasToggleMenuMobile, true)
                 }
               >
-                Serviços
+                SERVIÇOS
               </button>
-              <button
-                onClick={() =>
-                  scrollPage(refProfessionais, setHasToggleMenuMobile, true)
-                }
-              >
-                Especialistas
-              </button>
-              <button
-                onClick={() =>
-                  scrollPage(refConvenios, setHasToggleMenuMobile, true)
-                }
-              >
-                Convênios
-              </button>
-
-              <button>Estética</button>
 
               <button
                 onClick={() =>
                   scrollPage(refContact, setHasToggleMenuMobile, true)
                 }
               >
-                Contato
+                CONTATO
               </button>
             </div>
           </div>
@@ -291,18 +275,54 @@ export default function HomePage() {
               <SwiperSlide>
                 <Reveal>
                   <img
-                    src="/limpex/sobre.jpg"
+                    src="/1.png"
                     alt="Imagem da JR Limpex"
-                    className="w-full h-full object-cover rounded-lg "
+                    className="w-full h-[500px] object-contain rounded-lg "
                   />
                 </Reveal>
               </SwiperSlide>
               <SwiperSlide>
                 <Reveal>
                   <img
-                    src="/limpex/sobre.jpg"
+                    src="/2.png"
                     alt="Imagem da JR Limpex"
-                    className="w-full h-full object-cover rounded-lg "
+                    className="w-full h-[500px] object-contain rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reveal>
+                  <img
+                    src="/3.png"
+                    alt="Imagem da JR Limpex"
+                    className="w-full h-[500px] object-contain rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reveal>
+                  <img
+                    src="/4.png"
+                    alt="Imagem da JR Limpex"
+                    className="w-full h-[500px] object-contain rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reveal>
+                  <img
+                    src="/6.png"
+                    alt="Imagem da JR Limpex"
+                    className="w-full h-[500px] object-contain rounded-lg "
+                  />
+                </Reveal>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reveal>
+                  <img
+                    src="/5.png"
+                    alt="Imagem da JR Limpex"
+                    className="w-full h-[500px] object-contain rounded-lg "
                   />
                 </Reveal>
               </SwiperSlide>
@@ -478,18 +498,11 @@ export default function HomePage() {
             </Reveal>
             <Reveal>
               <p className="mt-4 text-zinc-500 font-light leading-relaxed text-md sm:text-lg">
-                Lorem ipsum dolor sit amet consectetur. Sit semper aliquam vel
-                in massa amet ultricies ac dignissim. Lobortis amet scelerisque
-                pellentesque consectetur tellus amet eget.
-                <br />
-                <br />
-                Mi sit ac pulvinar suspendisse sit nisl curabitur. Urna nisi
-                pharetra quam fermentum vel tincidunt. Orci volutpat nulla
-                gravida phasellus lectus. Vitae consectetur malesuada eu felis.
-                Integer nulla sociis mollis ultricies purus ultrices platea
-                eros. vel tincidunt. Orci volutpat nulla gravida phasellus
-                lectus. Vitae consectetur malesuada eu felis. Integer nulla
-                sociis mollis ultricies purus ultrices platea eros.
+                Bem-vindo à JRLimpex, onde a excelência se encontra com a
+                limpeza para proporcionar cozinhas impecáveis e seguras. Estamos
+                comprometidos em oferecer soluções de limpeza especializadas
+                para garantir que sua cozinha não apenas brilhe, mas também
+                cumpra os mais altos padrões de higiene.
               </p>
             </Reveal>
           </div>
@@ -503,13 +516,12 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Limpeza detalhadas
+                    Desengorduramento Profundo
                   </h2>
                   <p className="text-zinc-500">
-                    Ea ad reprehenderit laboris nisi. Elit dolore sunt minim
-                    proident sunt aliquip ex consequat eiusmod cupidatat. Mollit
-                    irure excepteur laboris in nisi reprehenderit anim eu non
-                    fugiat occaecat ut.
+                    Utilizamos técnicas avançadas e produtos especializados para
+                    eliminar resíduos de gordura e sujeira, deixando suas
+                    superfícies de cozinha imaculadas.
                   </p>
                 </div>
               </Reveal>
@@ -521,13 +533,12 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Profissional qualificado
+                    Desinfecção Eficiente
                   </h2>
                   <p className="text-zinc-500">
-                    Fugiat sint irure dolor nostrud ex do adipisicing commodo
-                    eiusmod deserunt irure culpa tempor. Occaecat deserunt
-                    nostrud magna non qui tempor officia in amet laborum eu ex
-                    incididunt.
+                    Priorizamos a segurança alimentar por meio de protocolos
+                    rigorosos de desinfecção, eliminando bactérias e germes para
+                    garantir um ambiente de cozinha higienizado.
                   </p>
                 </div>
               </Reveal>
@@ -539,12 +550,46 @@ export default function HomePage() {
                   </div>
 
                   <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
-                    Nutrição
+                    Manutenção Preventiva
                   </h2>
                   <p className="text-zinc-500">
-                    Labore mollit cillum tempor magna ullamco enim elit do
-                    fugiat non exercitation commodo in aliqua. Ea quis sit
-                    tempor commodo minim reprehenderit.
+                    Oferecemos programas personalizados de manutenção
+                    preventiva, prolongando a vida útil dos equipamentos de
+                    cozinha e reduzindo custos com reparos.
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-zinc-600 text-white rounded-full text-2xl flex items-center justify-center">
+                    4
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Treinamento de Equipe
+                  </h2>
+                  <p className="text-zinc-500">
+                    Nossa equipe é treinada para garantir que cada detalhe,
+                    desde áreas de difícil acesso até equipamentos específicos,
+                    seja tratado com a máxima atenção.
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="ml-5 relative bg-zinc-100 border-2 border-zinc-200 rounded-md p-5">
+                  <div className="absolute -left-5 -top-5 w-10 h-10 bg-zinc-600 text-white rounded-full text-2xl flex items-center justify-center">
+                    5
+                  </div>
+
+                  <h2 className="text-zinc-600/80 leading-relaxed text-md sm:text-lg">
+                    Sustentabilidade Ambiental
+                  </h2>
+                  <p className="text-zinc-500">
+                    Comprometemo-nos com práticas sustentáveis, utilizando
+                    produtos eco-friendly sempre que possível e minimizando o
+                    impacto ambiental durante nossos serviços.
                   </p>
                 </div>
               </Reveal>
@@ -620,11 +665,11 @@ export default function HomePage() {
               <div className="absolute w-[90%] text-sm p-5  right-0 -bottom-10 rounded-md  bg-primary-400 text-white">
                 <h1 className="text-xl font-medium">Junior Limpex</h1>
                 <p className="text-xs mt-3 text-zinc-200 leading-relaxed">
-                  - Nisi eiusmod pariatur amet anim esse dolor.
+                  - Responsável técnico
                 </p>
 
                 <p className="text-xs mt-3 text-zinc-200 leading-relaxed">
-                  - Nisi eiusmod pariatur amet anim esse dolor.
+                  - Proprietário da JRLimpex
                 </p>
               </div>
             </Reveal>
@@ -638,20 +683,21 @@ export default function HomePage() {
             </Reveal>
             <Reveal>
               <p className="leading-relaxed text-md md:text-lg mt-4 text-zinc-500">
-                Amet aute ut minim sint labore adipisicing proident amet. Quis
-                mollit laboris in sit voluptate irure laborum cillum qui
-                commodo. Duis dolor non ea nulla consectetur qui incididunt
-                ipsum. Eiusmod pariatur sit magna consectetur quis deserunt. Ut
-                veniam esse incididunt sunt tempor veniam aliqua culpa commodo
-                consequat.
+                Olá, sou Junior, o fundador e proprietário da JRLimpex, uma
+                empresa dedicada à excelência na limpeza de cozinhas. Com uma
+                paixão profunda pelo que faço, meu compromisso é ir além da
+                limpeza convencional, proporcionando ambientes de cozinha que
+                não apenas brilham, mas também garantem padrões impecáveis de
+                higiene e segurança alimentar.
                 <br />
                 <br />
-                Proident adipisicing id aliquip cupidatat. Adipisicing magna est
-                do adipisicing tempor. Irure cillum proident aliquip aliquip
-                cillum non laboris duis culpa id duis ullamco proident. Labore
-                tempor proident laboris occaecat commodo eiusmod do ea occaecat
-                velit ullamco nostrud esse. Occaecat irure id adipisicing minim
-                id voluptate aliqua dolore velit irure eu excepteur.
+                Sobre Mim: <br />
+                Desde o início, minha jornada no setor de limpeza de cozinhas
+                foi impulsionada pela visão de oferecer serviços que transcendem
+                as expectativas dos clientes. <br /> Minha experiência prática e
+                a compreensão das nuances específicas do ambiente da cozinha me
+                permitiram estabelecer a JRLimpex como uma referência em nosso
+                campo.
               </p>
             </Reveal>
           </div>
