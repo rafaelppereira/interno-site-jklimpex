@@ -553,7 +553,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
+      {/* <section
         ref={refConvenios}
         className="py-20 bg-zinc-100/50 border-t-2 border-b-2 border-zinc-200"
       >
@@ -605,7 +605,7 @@ export default function HomePage() {
             })}
           </Swiper>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20  border-t-2 border-b-2 border-zinc-200">
         <div className="container flex flex-col md:flex-row items-center gap-20">
