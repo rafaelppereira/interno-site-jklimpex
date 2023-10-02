@@ -60,7 +60,7 @@ export default function HomePage() {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/BSbZ7x31SqmJXdajL7Ut"
+          content="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/C1FeBfmdTrKlZr8rZJPo"
         />
         <meta property="og:type" content="website" />
         <meta property="og:updated_time" content="1440432930" />
@@ -292,7 +292,7 @@ export default function HomePage() {
                 <Reveal>
                   <img
                     src="/limpex/sobre.jpg"
-                    alt="Imagem da Clínica Santté"
+                    alt="Imagem da JR Limpex"
                     className="w-full h-full object-cover rounded-lg "
                   />
                 </Reveal>
@@ -301,7 +301,7 @@ export default function HomePage() {
                 <Reveal>
                   <img
                     src="/limpex/sobre.jpg"
-                    alt="Imagem da Clínica Santté"
+                    alt="Imagem da JR Limpex"
                     className="w-full h-full object-cover rounded-lg "
                   />
                 </Reveal>
