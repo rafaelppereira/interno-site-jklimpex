@@ -36,26 +36,26 @@ export default function HomePage() {
     <>
       <Head>
         <title>Início | JRLimpex</title>
-        <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
 
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="A Santté Saúde foi idealizada para oferecer o melhor para você e para toda sua família Primamos pelo atendimento humanizado, conforto e qualidade! ​"
+          content="Na JRLimpex, a qualidade é a nossa prioridade número um. Nossa equipe altamente treinada e experiente utiliza os métodos mais avançados e equipamentos de limpeza de alta tecnologia para garantir que suas coifas e cozinhas estejam impecáveis. Além disso, adotamos rigorosos padrões de segurança para proteger tanto os nossos funcionários quanto o seu estabelecimento durante o processo de limpeza. ​"
         />
-        <meta name="author" content="Clínica Santté" />
+        <meta name="author" content="JR Limpex" />
         <meta
           name="keywords"
-          content="clinica, clínica, saúde, saude, santté, Santté"
+          content="limpeza, coifa, profissional, limpeza de cozinhas, cozinhas, cozinha"
         />
-        <meta name="copyright" content="© 2024 Clínica Santté" />
+        <meta name="copyright" content="© 2024 JR Limpex" />
         <meta name="robots" content="all" />
 
-        <meta property="og:site_name" content="Clínica Santté" />
-        <meta property="og:title" content="Conheça o site da clínica Santté" />
+        <meta property="og:site_name" content="JR Limpex" />
+        <meta property="og:title" content="Conheça o site da JR Limpex" />
         <meta
           property="og:description"
-          content="A Santté Saúde foi idealizada para oferecer o melhor para você e para toda sua família Primamos pelo atendimento humanizado, conforto e qualidade!"
+          content="Na JRLimpex, a qualidade é a nossa prioridade número um. Nossa equipe altamente treinada e experiente utiliza os métodos mais avançados e equipamentos de limpeza de alta tecnologia para garantir que suas coifas e cozinhas estejam impecáveis. Além disso, adotamos rigorosos padrões de segurança para proteger tanto os nossos funcionários quanto o seu estabelecimento durante o processo de limpeza."
         />
         <meta
           property="og:image"
