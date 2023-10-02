@@ -7,6 +7,7 @@ module.exports = {
         banner: "url(/backgrounds/banner.png)",
         maintenance: "url(/backgrounds/bg-auth.png)",
         nutricaoBanner: "url(/backgrounds/nutricao_banner.png)",
+        banner2: "url()",
       },
 
       colors: {

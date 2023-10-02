@@ -8,13 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { scrollPage } from "@/utils/scroll-page";
 import { Contact } from "@/components/plus/Contact";
 import { Reveal } from "@/components/animation/Reveal";
-import { ButtonQueries } from "@/components/ButtonQueries";
 
 import {
   X,
   List,
   Phone,
-  FacebookLogo,
   WhatsappLogo,
   CircleDashed,
   InstagramLogo,
@@ -66,26 +64,26 @@ export default function HomePage() {
         <meta property="og:updated_time" content="1440432930" />
       </Head>
 
+      <Link
+        href="https://api.whatsapp.com/send?phone=5548991541048"
+        target="_blank"
+        title="Clique para entrar em contato"
+        className="fixed right-10 bottom-5 z-50 w-16 h-16 animate-bounce"
+      >
+        <img src="/whatsapp.png" />
+      </Link>
+
       <header className="fixed left-0 top-0 z-50 w-full">
         <section className="bg-zinc-800 w-full h-[30px] lg:h-[50px] flex items-center ">
           <div className="flex items-center justify-between px-8 max-w-7xl w-full mx-auto ">
             <div className="hidden lg:flex items-center gap-2">
               <Link
-                href=""
+                href="https://www.instagram.com/jr_limpex/"
                 target="_blank"
                 className="bg-zinc-700 text-white/90 rounded-full p-[0.3rem] hover:brightness-90 transition-all"
                 title="Clique para ir para o nosso Instagram"
               >
                 <InstagramLogo size={24} />
-              </Link>
-
-              <Link
-                href=""
-                target="_blank"
-                className="bg-zinc-700 text-white/90 rounded-full p-[0.3rem] hover:brightness-90 transition-all"
-                title="Clique para ir para o nosso Facebook"
-              >
-                <FacebookLogo size={24} />
               </Link>
 
               <Link
@@ -148,7 +146,7 @@ export default function HomePage() {
             </div>
 
             <Link
-              href=""
+              href="https://api.whatsapp.com/send?phone=5548991541048"
               target="_blank"
               title="Clique para entrar em contato"
               className="hidden xl:flex bg-zinc-700 items-center gap-2 text-white px-7 py-3 text-sm rounded-md hover:brightness-90 transition-all"
@@ -233,21 +231,6 @@ export default function HomePage() {
               <Reveal>
                 <span className="text-2xl md:text-4xl drop-shadow-md font-medium">
                   Serviços profissionais de limpeza
-                </span>
-              </Reveal>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-full h-[350px] md:h-[650px] text-white uppercase bg-zinc-100 bg-banner bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center">
-              <Reveal>
-                <h1 className="text-5xl md:text-8xl font-semibold drop-shadow-md">
-                  JR LIMPEX
-                </h1>
-              </Reveal>
-              <Reveal>
-                <span className="text-2xl md:text-4xl drop-shadow-md font-medium">
-                  Limpeza de exautores e cozinhas no geral
                 </span>
               </Reveal>
             </div>
@@ -383,46 +366,42 @@ export default function HomePage() {
                     <CircleDashed size={23} />
                   </div>
                   <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Restauração de cozinhas
+                    Limpeza e Manutenção Preventiva para Coifas, Dutos e
+                    Tubulações de Exaustão
                   </h1>
                 </Reveal>
                 <Reveal>
                   <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Adipisicing anim dolore aliqua amet ipsum reprehenderit
-                    irure tempor commodo. <br />
-                    <br /> Veniam reprehenderit pariatur excepteur ex irure
-                    dolor deserunt dolore laboris incididunt labore esse. <br />
+                    A qualidade do ar em ambientes comerciais e industriais é
+                    fundamental para garantir a segurança e o bem-estar de todos
+                    os ocupantes. Para assegurar um sistema de exaustão
+                    eficiente e livre de riscos, a limpeza e a manutenção
+                    preventiva de coifas, dutos e tubulações de exaustão são
+                    essenciais.
                     <br />
-                    Adipisicing fugiat aliqua cupidatat ipsum velit ut tempor
-                    deserunt cupidatat officia sit sint. <br />
-                    <br /> Veniam proident excepteur mollit enim tempor minim
-                    veniam sint mollit ipsum. Cupidatat pariatur cillum enim id.
-                  </p>
-                </Reveal>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="n2Class">
-              <div className="h-[400px] border-b-[1rem] border-zinc-600 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
-                <Reveal>
-                  <div className="icon-service w-11 h-11 bg-zinc-400 text-white flex items-center justify-center rounded-full">
-                    <CircleDashed size={23} />
-                  </div>
-                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Limpeza de Coifas
-                  </h1>
-                </Reveal>
-                <Reveal>
-                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Labore laboris dolor consectetur irure consequat velit sit
-                    consequat id nisi minim dolore. Culpa dolore minim pariatur
-                    ullamco occaecat nostrud tempor. <br />
-                    <br /> Aliqua veniam minim magna minim dolore officia
-                    exercitation. Tempor veniam nisi sint eiusmod duis do
-                    adipisicing sit id est tempor anim. <br />
-                    <br /> Nulla est duis et eu eiusmod dolor. Commodo
-                    exercitation nulla est anim pariatur. Excepteur ad eu culpa
-                    eiusmod cillum culpa nostrud officia eu ipsum cillum.
+                    <br />
+                    Por que é importante?
+                    <br />
+                    <br />
+                    Segurança contra Incêndios: A acumulação de gordura nas
+                    coifas e dutos pode representar um risco significativo de
+                    incêndio. A limpeza regular remove resíduos inflamáveis,
+                    reduzindo drasticamente a probabilidade de ocorrer um
+                    incêndio no sistema de exaustão. <br />
+                    <br />
+                    Eficiência Energética: Dutos e coifas obstruídos podem
+                    comprometer a eficiência do sistema de exaustão, levando a
+                    um aumento no consumo de energia. A limpeza preventiva
+                    garante que o sistema funcione de maneira otimizada,
+                    contribuindo para a eficiência energética e redução de
+                    custos operacionais.
+                    <br />
+                    <br />
+                    Qualidade do Ar Interno: A presença de partículas acumuladas
+                    nos componentes do sistema de exaustão pode comprometer a
+                    qualidade do ar interno. A limpeza regular remove
+                    contaminantes, garantindo um ambiente mais saudável para os
+                    ocupantes.
                   </p>
                 </Reveal>
               </div>
@@ -435,46 +414,53 @@ export default function HomePage() {
                     <CircleDashed size={23} />
                   </div>
                   <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Restauração de cozinhas
+                    Limpeza Geral de Cozinhas: Elevando a Higiene e Eficiência
+                    no Coração do seu Espaço Culinar
                   </h1>
                 </Reveal>
                 <Reveal>
                   <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Adipisicing anim dolore aliqua amet ipsum reprehenderit
-                    irure tempor commodo. <br />
-                    <br /> Veniam reprehenderit pariatur excepteur ex irure
-                    dolor deserunt dolore laboris incididunt labore esse. <br />
+                    Uma cozinha limpa não é apenas uma questão de estética, mas
+                    é crucial para garantir a segurança alimentar, a eficiência
+                    operacional e o bem-estar de todos os envolvidos. Oferecemos
+                    serviços especializados de limpeza geral de cozinhas,
+                    abrangendo desde os equipamentos até os espaços de
+                    preparação, assegurando um ambiente imaculado e propício
+                    para a excelência culinária.
                     <br />
-                    Adipisicing fugiat aliqua cupidatat ipsum velit ut tempor
-                    deserunt cupidatat officia sit sint. <br />
-                    <br /> Veniam proident excepteur mollit enim tempor minim
-                    veniam sint mollit ipsum. Cupidatat pariatur cillum enim id.
-                  </p>
-                </Reveal>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="n2Class">
-              <div className="h-[400px] border-b-[1rem] border-zinc-600 overflow-y-auto flex-1 bg-primary-500 p-7 sm:p-10  text-left rounded-md">
-                <Reveal>
-                  <div className="icon-service w-11 h-11 bg-zinc-400 text-white flex items-center justify-center rounded-full">
-                    <CircleDashed size={23} />
-                  </div>
-                  <h1 className="mt-6 text-white text-2xl sm:text-3xl">
-                    Limpeza de Coifas
-                  </h1>
-                </Reveal>
-                <Reveal>
-                  <p className="text-zinc-200 text-sm sm:text-lg md:text-lg mt-2 font-light leading-relaxed ">
-                    Labore laboris dolor consectetur irure consequat velit sit
-                    consequat id nisi minim dolore. Culpa dolore minim pariatur
-                    ullamco occaecat nostrud tempor. <br />
-                    <br /> Aliqua veniam minim magna minim dolore officia
-                    exercitation. Tempor veniam nisi sint eiusmod duis do
-                    adipisicing sit id est tempor anim. <br />
-                    <br /> Nulla est duis et eu eiusmod dolor. Commodo
-                    exercitation nulla est anim pariatur. Excepteur ad eu culpa
-                    eiusmod cillum culpa nostrud officia eu ipsum cillum.
+                    <br />
+                    Nossos Serviços Abrangentes:
+                    <br />
+                    <br />
+                    Limpeza Profunda de Equipamentos: Realizamos a desmontagem e
+                    limpeza minuciosa de fogões, fornos, grelhas, exaustores e
+                    outros equipamentos, removendo depósitos de gordura e
+                    resíduos que possam comprometer o desempenho e a segurança.
+                    <br />
+                    Higienização de Superfícies e Bancadas: Todas as
+                    superfícies, incluindo bancadas, mesas de preparação e áreas
+                    de trabalho, são higienizadas de forma rigorosa para
+                    prevenir a contaminação cruzada e garantir um ambiente
+                    seguro para a manipulação de alimentos.
+                    <br />
+                    <br />
+                    Limpeza de Dutos e Exaustores: Os sistemas de ventilação são
+                    fundamentais para manter a qualidade do ar na cozinha.
+                    Realizamos a limpeza de dutos e exaustores, removendo
+                    acúmulos de gordura e resíduos que podem comprometer a
+                    eficiência e representar riscos à segurança.
+                    <br />
+                    <br />
+                    Limpeza de Pisos e Rejuntes: A limpeza profunda de pisos e
+                    rejuntes é essencial para prevenir escorregões, quedas e a
+                    proliferação de bactérias. Utilizamos produtos adequados
+                    para garantir a máxima higiene em todas as áreas.
+                    <br />
+                    <br />
+                    Descarte Adequado de Resíduos: Gerenciamos o descarte
+                    responsável de resíduos gerados durante o processo de
+                    limpeza, seguindo todas as normas e regulamentações
+                    ambientais.
                   </p>
                 </Reveal>
               </div>
@@ -598,60 +584,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* <section
-        ref={refConvenios}
-        className="py-20 bg-zinc-100/50 border-t-2 border-b-2 border-zinc-200"
-      >
-        <div className="container flex justify-center">
-          <Reveal>
-            <h2 className="text-2xl sm:text-3xl text-zinc-500 font-semibold border-b-2 border-secondary-500/60 pb-2 px-3">
-              Marcas que utilizamos
-            </h2>
-          </Reveal>
-        </div>
-
-        <div className="container flex flex-col md:flex-row gap-10 mt-20">
-          <Swiper
-            effect="fade"
-            spaceBetween={20}
-            slidesPerView={1}
-            pagination={true}
-            modules={[Autoplay, Pagination]}
-            className="default"
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 4,
-              },
-            }}
-          >
-            {convenios.map((item, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <div className="w-full flex flex-col aspect-square overflow-hidden bg-white border-2 border-zinc-200 rounded-md">
-                    <div className="flex-1 flex items-center justify-center p-5">
-                      <img
-                        src={item.image_url}
-                        alt={`Convênio da ${item.name}`}
-                        className=" object-contain"
-                      />
-                    </div>
-
-                    <div className="bg-primary-500 py-4 uppercase">
-                      <Reveal>
-                        <h1 className="text-white text-xl">{item.name}</h1>
-                      </Reveal>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-      </section> */}
-
       <section className="py-20  border-t-2 border-b-2 border-zinc-200">
         <div className="container flex flex-col md:flex-row items-center gap-20">
           <div className="relative rounded-md shrink-0 w-full sm:w-auto">
@@ -714,9 +646,13 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row items-center gap-2 py-5 px-6 bg-white rounded-b-2xl">
               <img className="w-20" src="/logo.svg" alt="" />
               <p className="hidden md:block pl-5 text-zinc-500 leading-relaxed">
-                A Santté Saúde foi idealizada para oferecer o melhor para você e
-                para toda sua família Primamos pelo atendimento humanizado,
-                conforto e qualidade!
+                Na JRLimpex, a qualidade é a nossa prioridade número um. Nossa
+                equipe altamente treinada e experiente utiliza os métodos mais
+                avançados e equipamentos de limpeza de alta tecnologia para
+                garantir que suas coifas e cozinhas estejam impecáveis. Além
+                disso, adotamos rigorosos padrões de segurança para proteger
+                tanto os nossos funcionários quanto o seu estabelecimento
+                durante o processo de limpeza.
               </p>
             </div>
           </Reveal>
@@ -746,7 +682,7 @@ export default function HomePage() {
                   }
                   className="mt-2 text-center md:text-left  font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
-                  Especialistas
+                  Especialidades
                 </button>
                 <button
                   onClick={() => scrollPage(refContact, setHasToggleMenuMobile)}
@@ -761,23 +697,16 @@ export default function HomePage() {
                 <h2>Redes sociais</h2>
                 <Link
                   target="_blank"
-                  href=""
+                  href="https://www.instagram.com/jr_limpex/"
                   className="mt-2 flex items-center gap-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   <InstagramLogo size={24} />
                   Instagram
                 </Link>
+
                 <Link
                   target="_blank"
-                  href=""
-                  className="mt-2 flex items-center gap-2 font-light text-zinc-300 hover:brightness-90 transition-all"
-                >
-                  <FacebookLogo size={24} />
-                  Facebook
-                </Link>
-                <Link
-                  target="_blank"
-                  href=""
+                  href="https://api.whatsapp.com/send?phone=5548991541048"
                   className="mt-2 flex items-center gap-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   <WhatsappLogo size={24} />
@@ -790,14 +719,14 @@ export default function HomePage() {
                 <h2>Contato</h2>
                 <Link
                   target="_blank"
-                  href=""
+                  href="https://api.whatsapp.com/send?phone=5548991541048"
                   className="mt-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   Whatsapp
                 </Link>
                 <Link
                   target="_blank"
-                  href="mailto:atendimento@clinicasantte.com"
+                  href="mailto:ailtonjunior1234pereira@gmail.com"
                   className="mt-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   E-mail
@@ -809,13 +738,12 @@ export default function HomePage() {
           <div className="border-t border-white/20 pt-6 mt-10 flex flex-col items-center justify-center">
             <Reveal>
               <span className="text-sm text-zinc-200 font-light text-center md:text-left block">
-                Santté clinica médica Ltda - CNPJ: 09091209/0001-23 | Santté
-                clínica médica
+                JR Limpex - Todos os direitos reservados | JR Limpex @2023
               </span>
             </Reveal>
             <Reveal>
               <span className="text-sm text-zinc-400 mt-2 font-light">
-                Feito por Nitro desenvolvimentos
+                Feito por Nitro desenvolvimento
               </span>
             </Reveal>
           </div>
