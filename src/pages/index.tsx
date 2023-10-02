@@ -291,7 +291,7 @@ export default function HomePage() {
               <SwiperSlide>
                 <Reveal>
                   <img
-                    src="/limpex/sobre.JPG"
+                    src="/limpex/sobre.jpg"
                     alt="Imagem da Clínica Santté"
                     className="w-full h-full object-cover rounded-lg "
                   />
@@ -300,7 +300,7 @@ export default function HomePage() {
               <SwiperSlide>
                 <Reveal>
                   <img
-                    src="/limpex/sobre.JPG"
+                    src="/limpex/sobre.jpg"
                     alt="Imagem da Clínica Santté"
                     className="w-full h-full object-cover rounded-lg "
                   />
@@ -611,7 +611,7 @@ export default function HomePage() {
         <div className="container flex flex-col md:flex-row items-center gap-20">
           <div className="relative rounded-md shrink-0 w-full sm:w-auto">
             <img
-              src="/limpex/foto.JPEG"
+              src="/limpex/foto.jpeg"
               alt="Imagem do médico"
               className="w-full  md:w-[450px] md:h-[500px] aspect-square md:aspect-auto object-cover object-bottom  border-4 border-zinc-200/70"
             />
