@@ -78,7 +78,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between px-8 max-w-7xl w-full mx-auto ">
             <div className="hidden lg:flex items-center gap-2">
               <Link
-                href="https://www.instagram.com/jr_limpex/"
+                href="https://www.instagram.com/jrlimpex_/"
                 target="_blank"
                 className="bg-zinc-700 text-white/90 rounded-full p-[0.3rem] hover:brightness-90 transition-all"
                 title="Clique para ir para o nosso Instagram"
@@ -697,7 +697,7 @@ export default function HomePage() {
                 <h2>Redes sociais</h2>
                 <Link
                   target="_blank"
-                  href="https://www.instagram.com/jr_limpex/"
+                  href="https://www.instagram.com/jrlimpex_/"
                   className="mt-2 flex items-center gap-2 font-light text-zinc-300 hover:brightness-90 transition-all"
                 >
                   <InstagramLogo size={24} />
